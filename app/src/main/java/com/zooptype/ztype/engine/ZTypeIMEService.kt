@@ -5,21 +5,31 @@ import android.os.Build
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputConnection
+import androidx.preference.PreferenceManager
 import com.zooptype.ztype.debug.DebugOverlay
 import com.zooptype.ztype.gesture.GestureProcessor
 import com.zooptype.ztype.haptics.HapticEngine
 import com.zooptype.ztype.node.NodeLayoutEngine
+import com.zooptype.ztype.persistence.UserDataRepository
 import com.zooptype.ztype.physics.DivePhysics
+import com.zooptype.ztype.theme.Theme
+import com.zooptype.ztype.theme.ThemeEngine
 import com.zooptype.ztype.trie.HybridTrie
 import com.zooptype.ztype.trie.TrieNavigator
 
 /**
- * Z-Type Input Method Service.
+ * Keybrot Input Method Service.
  *
  * The core entry point. This is an Android IME that renders a transparent
  * OpenGL ES 3.0 surface over the application, presenting an interactive
  * 3D sphere of alphanumeric and conceptual nodes.
+ *
+ * Architecture:
+ * - GLSurfaceView handles touch → GestureProcessor → DivePhysics
+ * - Renderer reads physics state + trie state each frame
+ * - Renderer does hit-testing (which node is camera facing?) → notifies GestureProcessor
+ * - GestureProcessor notifies IMEService → commits text
+ * - Persistence saves/loads user frequency data on session boundaries
  */
 class ZTypeIMEService : InputMethodService() {
 
@@ -32,23 +42,51 @@ class ZTypeIMEService : InputMethodService() {
     private lateinit var hapticEngine: HapticEngine
     private lateinit var nodeLayoutEngine: NodeLayoutEngine
     private lateinit var debugOverlay: DebugOverlay
+    private lateinit var themeEngine: ThemeEngine
+    private lateinit var userDataRepo: UserDataRepository
 
     // Current composing text buffer
     private var composingText = StringBuilder()
 
+    // Previously committed word (for bigram recording)
+    private var previousWord: String? = null
+
     override fun onCreate() {
         super.onCreate()
+
+        // Initialize persistence
+        userDataRepo = UserDataRepository(this)
 
         // Initialize the Hybrid Trie with dictionary
         hybridTrie = HybridTrie()
         hybridTrie.loadDefaultDictionary(this)
 
+        // Load user learning data from persistence
+        if (userDataRepo.getAdaptiveLearning()) {
+            hybridTrie.importUserData(userDataRepo.loadWordFrequencies())
+            hybridTrie.importBigramData(userDataRepo.loadBigramData())
+        }
+
         // Initialize subsystems
         trieNavigator = TrieNavigator(hybridTrie)
-        hapticEngine = HapticEngine(this)
+        trieNavigator.maxVisibleNodes = userDataRepo.getMaxVisibleNodes()
+
+        hapticEngine = HapticEngine(this).apply {
+            isEnabled = userDataRepo.getHapticsEnabled()
+            intensity = userDataRepo.getHapticIntensity()
+        }
+
         divePhysics = DivePhysics()
         debugOverlay = DebugOverlay()
         nodeLayoutEngine = NodeLayoutEngine()
+
+        themeEngine = ThemeEngine().apply {
+            currentTheme = try {
+                Theme.valueOf(userDataRepo.getThemeName())
+            } catch (e: Exception) {
+                Theme.CYBER_LUMINESCENT
+            }
+        }
     }
 
     override fun onCreateInputView(): View {
@@ -74,6 +112,11 @@ class ZTypeIMEService : InputMethodService() {
             onReset = { resetInput() }
         )
 
+        // Wire the renderer to the gesture processor for hit-test notifications
+        renderer.gestureProcessor = gestureProcessor
+        renderer.themeEngine = themeEngine
+        renderer.hapticEngine = hapticEngine
+
         // Create the OpenGL surface view
         glView = ZTypeGLSurfaceView(this, renderer, gestureProcessor)
 
@@ -88,7 +131,6 @@ class ZTypeIMEService : InputMethodService() {
         window?.window?.let { w ->
             w.setBackgroundDrawableResource(android.R.color.transparent)
 
-            w.addFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE.inv()) // Keep focusable for IME
             w.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
             // Allow transparent rendering
@@ -108,10 +150,14 @@ class ZTypeIMEService : InputMethodService() {
     override fun onStartInputView(info: EditorInfo?, restarting: Boolean) {
         super.onStartInputView(info, restarting)
 
+        // Reload settings (user may have changed them)
+        reloadSettings()
+
         // Reset state for new input session
         composingText.clear()
-        trieNavigator.reset()
-        divePhysics.reset()
+        previousWord = null
+        trieNavigator.fullReset()
+        divePhysics.fullReset()
 
         // Inform renderer that we're active
         renderer.setActive(true)
@@ -120,6 +166,28 @@ class ZTypeIMEService : InputMethodService() {
     override fun onFinishInputView(finishingInput: Boolean) {
         super.onFinishInputView(finishingInput)
         renderer.setActive(false)
+
+        // Persist user learning data
+        if (userDataRepo.getAdaptiveLearning()) {
+            userDataRepo.saveWordFrequencies(hybridTrie.exportUserData())
+            userDataRepo.saveBigramData(hybridTrie.exportBigramData())
+        }
+    }
+
+    /**
+     * Reload settings from SharedPreferences.
+     */
+    private fun reloadSettings() {
+        trieNavigator.maxVisibleNodes = userDataRepo.getMaxVisibleNodes()
+        hapticEngine.isEnabled = userDataRepo.getHapticsEnabled()
+        hapticEngine.intensity = userDataRepo.getHapticIntensity()
+        debugOverlay.setEnabled(userDataRepo.getDebugOverlay())
+
+        themeEngine.currentTheme = try {
+            Theme.valueOf(userDataRepo.getThemeName())
+        } catch (e: Exception) {
+            Theme.CYBER_LUMINESCENT
+        }
     }
 
     /**
@@ -130,15 +198,47 @@ class ZTypeIMEService : InputMethodService() {
         composingText.append(char)
 
         // Update the composing text in the target app
-        currentInputConnection?.let { ic ->
-            ic.setComposingText(composingText, 1)
-        }
+        currentInputConnection?.setComposingText(composingText, 1)
 
         // Advance the trie navigator to show next predictions
         trieNavigator.advance(char)
 
+        // Check for auto-commit on End-of-Word
+        if (trieNavigator.isEndOfWord()) {
+            val word = trieNavigator.getCurrentWord()
+            if (word != null) {
+                autoCommitWord(word)
+                return
+            }
+        }
+
         // Haptic feedback for selection
         hapticEngine.onNodeSelected()
+    }
+
+    /**
+     * Auto-commit when an End-of-Word node is reached during diving.
+     */
+    private fun autoCommitWord(word: String) {
+        currentInputConnection?.let { ic ->
+            ic.commitText("$word ", 1)
+        }
+
+        // Record bigram
+        previousWord?.let { prev ->
+            hybridTrie.recordBigram(prev, word)
+        }
+        previousWord = word
+
+        // Boost frequency
+        hybridTrie.boostFrequency(word)
+
+        // Reset for next word
+        composingText.clear()
+        trieNavigator.reset(word)
+        divePhysics.reset()
+
+        hapticEngine.onWordCommitted()
     }
 
     /**
@@ -158,15 +258,21 @@ class ZTypeIMEService : InputMethodService() {
         }
 
         currentInputConnection?.let { ic ->
-            ic.commitText("$textToCommit ", 1) // Commit with trailing space
+            ic.commitText("$textToCommit ", 1)
         }
+
+        // Record bigram
+        previousWord?.let { prev ->
+            hybridTrie.recordBigram(prev, textToCommit)
+        }
+        previousWord = textToCommit
 
         // Boost frequency for this word in the trie
         hybridTrie.boostFrequency(textToCommit)
 
         // Reset for next word
         composingText.clear()
-        trieNavigator.reset()
+        trieNavigator.reset(textToCommit)
         divePhysics.reset()
 
         hapticEngine.onWordCommitted()
@@ -189,21 +295,14 @@ class ZTypeIMEService : InputMethodService() {
         }
     }
 
-    /**
-     * Auto-commit when an End-of-Word node is reached during diving.
-     */
-    fun onEndOfWordReached(word: String) {
-        currentInputConnection?.let { ic ->
-            ic.commitText("$word ", 1)
-        }
-        hybridTrie.boostFrequency(word)
-        composingText.clear()
-        trieNavigator.reset()
-        divePhysics.reset()
-    }
-
     override fun onDestroy() {
         super.onDestroy()
         hapticEngine.release()
+
+        // Final persistence save
+        if (userDataRepo.getAdaptiveLearning()) {
+            userDataRepo.saveWordFrequencies(hybridTrie.exportUserData())
+            userDataRepo.saveBigramData(hybridTrie.exportBigramData())
+        }
     }
 }

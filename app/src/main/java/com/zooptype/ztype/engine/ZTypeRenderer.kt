@@ -5,21 +5,30 @@ import android.opengl.GLES30
 import android.opengl.GLSurfaceView
 import android.opengl.Matrix
 import com.zooptype.ztype.debug.DebugOverlay
+import com.zooptype.ztype.gesture.GestureProcessor
+import com.zooptype.ztype.haptics.HapticEngine
 import com.zooptype.ztype.node.NodeLayoutEngine
 import com.zooptype.ztype.node.SphereNode
 import com.zooptype.ztype.physics.DivePhysics
+import com.zooptype.ztype.theme.ThemeEngine
 import com.zooptype.ztype.trie.TrieNavigator
 import javax.microedition.khronos.egl.EGLConfig
 import javax.microedition.khronos.opengles.GL10
+import kotlin.math.sqrt
 
 /**
- * The main OpenGL ES 3.0 Renderer for Z-Type.
+ * The main OpenGL ES 3.0 Renderer for Keybrot.
  *
- * Orchestrates the render loop:
- * 1. Clear to transparent
- * 2. Update physics (camera position, node positions)
- * 3. Render nodes on the sphere
- * 4. Render debug overlay (FPS, touch vectors, trie state)
+ * Orchestrates the complete render loop each frame:
+ * 1. Calculate delta time
+ * 2. Update physics (camera position, velocity smoothing)
+ * 3. Layout nodes on sphere (Fibonacci distribution)
+ * 4. Hit-test: determine which node the camera is facing
+ * 5. Update focus/magnetism on the closest node
+ * 6. Check for selection threshold (Mandelbrot trigger)
+ * 7. Apply theme colors
+ * 8. Render all nodes with SDF text + glow
+ * 9. Render debug overlay
  */
 class ZTypeRenderer(
     private val context: Context,
@@ -29,15 +38,18 @@ class ZTypeRenderer(
     private val debugOverlay: DebugOverlay
 ) : GLSurfaceView.Renderer {
 
+    // Wired by IMEService after construction
+    var gestureProcessor: GestureProcessor? = null
+    var themeEngine: ThemeEngine? = null
+    var hapticEngine: HapticEngine? = null
+
     // Matrices
     private val projectionMatrix = FloatArray(16)
     private val viewMatrix = FloatArray(16)
     private val vpMatrix = FloatArray(16)
 
     // Shader programs
-    private var nodeShaderProgram: Int = 0
     private var sdfTextShaderProgram: Int = 0
-    private var glowShaderProgram: Int = 0
 
     // SDF Font Atlas
     private lateinit var sdfFontAtlas: SDFFontAtlas
@@ -58,6 +70,10 @@ class ZTypeRenderer(
     private var viewportWidth = 0
     private var viewportHeight = 0
 
+    // Current frame's rendered nodes (for hit-testing)
+    private var currentFrameNodes: List<SphereNode> = emptyList()
+    private var previousFocusedIndex = -1
+
     fun setActive(active: Boolean) {
         isActive = active
     }
@@ -74,10 +90,7 @@ class ZTypeRenderer(
         GLES30.glEnable(GLES30.GL_DEPTH_TEST)
         GLES30.glDepthFunc(GLES30.GL_LEQUAL)
 
-        // Compile shaders
-        nodeShaderProgram = ShaderCompiler.compileProgram(
-            NODE_VERTEX_SHADER, NODE_FRAGMENT_SHADER
-        )
+        // Compile SDF text shader
         sdfTextShaderProgram = ShaderCompiler.compileProgram(
             SDF_VERTEX_SHADER, SDF_FRAGMENT_SHADER
         )
@@ -100,23 +113,15 @@ class ZTypeRenderer(
         // Perspective projection — looking into the sphere
         val ratio = width.toFloat() / height.toFloat()
         Matrix.perspectiveM(projectionMatrix, 0, 60f, ratio, 0.1f, 100f)
-
-        // Initial camera: looking at origin from slightly back
-        Matrix.setLookAtM(
-            viewMatrix, 0,
-            0f, 0f, 3f,    // eye: slightly back from center
-            0f, 0f, 0f,    // center: looking at origin
-            0f, 1f, 0f     // up: Y-axis
-        )
     }
 
     override fun onDrawFrame(gl: GL10?) {
-        // Calculate delta time
+        // --- TIMING ---
         val now = System.nanoTime()
         deltaTime = (now - lastFrameTime) / 1_000_000_000f
         lastFrameTime = now
 
-        // FPS calculation
+        // FPS tracking
         frameCount++
         fpsAccumulator += deltaTime
         if (fpsAccumulator >= 1f) {
@@ -130,31 +135,64 @@ class ZTypeRenderer(
 
         if (!isActive) return
 
-        // --- UPDATE PHASE ---
-
-        // Update physics (camera position based on touch input)
+        // --- PHYSICS UPDATE ---
         divePhysics.update(deltaTime)
-
-        // Get current camera matrix from physics
         divePhysics.applyCameraTransform(viewMatrix)
-
-        // Compute view-projection matrix
         Matrix.multiplyMM(vpMatrix, 0, projectionMatrix, 0, viewMatrix, 0)
 
-        // Get the current nodes to display from the trie navigator + layout engine
-        val currentNodes = trieNavigator.getCurrentNodes()
+        // --- NODE LAYOUT ---
+        val trieNodes = trieNavigator.getCurrentNodes()
         val layoutNodes = nodeLayoutEngine.layoutOnSphere(
-            currentNodes,
+            trieNodes,
             divePhysics.getCurrentSphereRadius(),
             divePhysics.getZoomProgress()
         )
+        nodeLayoutEngine.updateAnimation(deltaTime)
 
-        // --- RENDER PHASE ---
+        // --- HIT TESTING ---
+        val focusedIndex = performHitTest(layoutNodes)
+        divePhysics.setFocusedNode(focusedIndex)
 
-        // Render each node
+        // Haptic hover feedback when focus changes
+        if (focusedIndex != previousFocusedIndex && focusedIndex >= 0) {
+            hapticEngine?.onNodeHover()
+        }
+        previousFocusedIndex = focusedIndex
+
+        // Apply focus attraction
+        if (focusedIndex >= 0) {
+            val lookDir = divePhysics.getLookDirection()
+            nodeLayoutEngine.applyFocusAttraction(
+                layoutNodes, focusedIndex, divePhysics.magnetism,
+                lookDir[0], lookDir[1], lookDir[2]
+            )
+        }
+
+        // --- SELECTION CHECK ---
+        if (divePhysics.shouldSelect() && focusedIndex >= 0 && focusedIndex < layoutNodes.size) {
+            val selectedNode = layoutNodes[focusedIndex]
+            // Trigger Mandelbrot spawn animation from selected node's position
+            nodeLayoutEngine.triggerMandelbrotSpawn(
+                selectedNode.worldX, selectedNode.worldY, selectedNode.worldZ
+            )
+            // Notify gesture processor of selection
+            val char = selectedNode.displayChar
+            if (char != ' ') {
+                gestureProcessor?.notifyNodeSelected(char)
+            }
+            // Reset zoom for next selection
+            divePhysics.reset()
+        }
+
+        // --- THEME ---
+        themeEngine?.applyTheme(layoutNodes)
+
+        currentFrameNodes = layoutNodes
+
+        // --- RENDER ---
         renderNodes(layoutNodes)
 
-        // Render debug overlay
+        // --- DEBUG OVERLAY ---
         debugOverlay.render(
             vpMatrix = vpMatrix,
             fps = currentFps,
@@ -164,13 +202,55 @@ class ZTypeRenderer(
             viewportWidth = viewportWidth,
             viewportHeight = viewportHeight
         )
+
+        // --- ENGINE HUM ---
+        hapticEngine?.updateEngineHum(divePhysics.getSpeed())
+    }
+
+    /**
+     * Hit-test: Find which node is closest to the camera's look direction.
+     *
+     * Uses dot product between camera look vector and the direction
+     * from camera to each node. The node with the highest dot product
+     * (smallest angle) is the "focused" node.
+     */
+    private fun performHitTest(nodes: List<SphereNode>): Int {
+        if (nodes.isEmpty()) return -1
+
+        val lookDir = divePhysics.getLookDirection()
+        var bestDot = -1f
+        var bestIndex = -1
+
+        for ((i, node) in nodes.withIndex()) {
+            // Direction from origin to node (normalized)
+            val dx = node.worldX
+            val dy = node.worldY
+            val dz = node.worldZ
+            val len = sqrt(dx * dx + dy * dy + dz * dz)
+            if (len < 0.001f) continue
+
+            val nx = dx / len
+            val ny = dy / len
+            val nz = dz / len
+
+            // Dot product with look direction
+            val dot = lookDir[0] * nx + lookDir[1] * ny + lookDir[2] * nz
+
+            if (dot > bestDot) {
+                bestDot = dot
+                bestIndex = i
+            }
+        }
+
+        // Only count as focused if reasonably close (within ~30 degrees)
+        return if (bestDot > 0.85f) bestIndex else -1
     }
 
     private fun renderNodes(nodes: List<SphereNode>) {
         GLES30.glUseProgram(sdfTextShaderProgram)
 
         for (node in nodes) {
-            // Calculate model matrix for this node on the sphere
+            // Calculate model matrix for this node
             val modelMatrix = FloatArray(16)
             Matrix.setIdentityM(modelMatrix, 0)
             Matrix.translateM(modelMatrix, 0, node.worldX, node.worldY, node.worldZ)
@@ -203,55 +283,39 @@ class ZTypeRenderer(
 
     /**
      * Make a model matrix billboard — always face the camera.
+     * Extracts the rotation from the view matrix and applies the inverse.
      */
     private fun applyBillboard(modelMatrix: FloatArray, viewMatrix: FloatArray) {
-        // Extract rotation from view matrix and apply inverse to model
-        modelMatrix[0] = viewMatrix[0]; modelMatrix[1] = viewMatrix[4]; modelMatrix[2] = viewMatrix[8]
-        modelMatrix[4] = viewMatrix[1]; modelMatrix[5] = viewMatrix[5]; modelMatrix[6] = viewMatrix[9]
-        modelMatrix[8] = viewMatrix[2]; modelMatrix[9] = viewMatrix[6]; modelMatrix[10] = viewMatrix[10]
+        // Preserve translation (indices 12, 13, 14)
+        val tx = modelMatrix[12]
+        val ty = modelMatrix[13]
+        val tz = modelMatrix[14]
+        val sx = modelMatrix[0] // Scale X (approximate)
+        val sy = modelMatrix[5] // Scale Y (approximate)
+        val sz = modelMatrix[10] // Scale Z (approximate)
+
+        // Set rotation to inverse of view rotation (transpose)
+        modelMatrix[0] = viewMatrix[0] * sx
+        modelMatrix[1] = viewMatrix[4] * sx
+        modelMatrix[2] = viewMatrix[8] * sx
+        modelMatrix[4] = viewMatrix[1] * sy
+        modelMatrix[5] = viewMatrix[5] * sy
+        modelMatrix[6] = viewMatrix[9] * sy
+        modelMatrix[8] = viewMatrix[2] * sz
+        modelMatrix[9] = viewMatrix[6] * sz
+        modelMatrix[10] = viewMatrix[10] * sz
+
+        // Restore translation
+        modelMatrix[12] = tx
+        modelMatrix[13] = ty
+        modelMatrix[14] = tz
     }
 
     fun onDestroy() {
-        if (nodeShaderProgram != 0) GLES30.glDeleteProgram(nodeShaderProgram)
         if (sdfTextShaderProgram != 0) GLES30.glDeleteProgram(sdfTextShaderProgram)
-        if (glowShaderProgram != 0) GLES30.glDeleteProgram(glowShaderProgram)
     }
 
     companion object {
-        // --- VERTEX SHADER: Node rendering ---
-        const val NODE_VERTEX_SHADER = """
-            #version 300 es
-            layout(location = 0) in vec3 aPosition;
-            layout(location = 1) in vec2 aTexCoord;
-
-            uniform mat4 uMVPMatrix;
-
-            out vec2 vTexCoord;
-
-            void main() {
-                gl_Position = uMVPMatrix * vec4(aPosition, 1.0);
-                vTexCoord = aTexCoord;
-            }
-        """
-
-        // --- FRAGMENT SHADER: Node rendering ---
-        const val NODE_FRAGMENT_SHADER = """
-            #version 300 es
-            precision mediump float;
-
-            in vec2 vTexCoord;
-
-            uniform vec4 uColor;
-            uniform sampler2D uTexture;
-
-            out vec4 fragColor;
-
-            void main() {
-                vec4 texColor = texture(uTexture, vTexCoord);
-                fragColor = texColor * uColor;
-            }
-        """
-
         // --- VERTEX SHADER: SDF Text ---
         const val SDF_VERTEX_SHADER = """
             #version 300 es
@@ -284,24 +348,27 @@ class ZTypeRenderer(
             void main() {
                 float dist = texture(uSDFTexture, vTexCoord).r;
 
-                // SDF edge threshold
+                // SDF edge thresholds
                 float edgeWidth = 0.1;
                 float edge = 0.5;
 
-                // Smooth text edge
+                // Crisp text edge
                 float alpha = smoothstep(edge - edgeWidth, edge + edgeWidth, dist);
 
-                // Glow effect: softer, wider threshold
+                // Glow halo: softer, wider threshold
                 float glowEdge = 0.3;
                 float glowWidth = 0.25;
                 float glowAlpha = smoothstep(glowEdge - glowWidth, glowEdge, dist) * uGlowIntensity;
 
                 // Combine: solid text + glow halo
                 vec3 textColor = uColor.rgb;
-                vec3 glowColor = uColor.rgb * 1.5; // Brighter glow
+                vec3 glowColor = uColor.rgb * 1.5; // Brighter glow, will be clamped
 
                 vec3 finalColor = mix(glowColor, textColor, alpha);
                 float finalAlpha = max(alpha, glowAlpha) * uColor.a;
+
+                // Discard fully transparent fragments for performance
+                if (finalAlpha < 0.01) discard;
 
                 fragColor = vec4(finalColor, finalAlpha);
             }
