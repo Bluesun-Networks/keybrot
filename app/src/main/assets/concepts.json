@@ -1,0 +1,99 @@
+[
+  {
+    "triggerWord": "food",
+    "concepts": [
+      {"label": "burger", "emoji": "\uD83C\uDF54", "icon": "Burger", "frequency": 10},
+      {"label": "pizza", "emoji": "\uD83C\uDF55", "icon": "Pizza", "frequency": 9},
+      {"label": "apple", "emoji": "\uD83C\uDF4E", "icon": "Apple", "frequency": 8},
+      {"label": "taco", "emoji": "\uD83C\uDF2E", "icon": "Taco", "frequency": 7},
+      {"label": "sushi", "emoji": "\uD83C\uDF63", "icon": "Sushi", "frequency": 6},
+      {"label": "salad", "emoji": "\uD83E\uDD57", "icon": "Salad", "frequency": 5}
+    ]
+  },
+  {
+    "triggerWord": "travel",
+    "concepts": [
+      {"label": "plane", "emoji": "✈️", "icon": "Plane", "frequency": 10},
+      {"label": "hotel", "emoji": "\uD83C\uDFE8", "icon": "Hotel", "frequency": 9},
+      {"label": "map", "emoji": "\uD83D\uDDFA️", "icon": "Map", "frequency": 8},
+      {"label": "beach_icon", "emoji": "\uD83C\uDFD6️", "icon": "Beach", "frequency": 7},
+      {"label": "car_icon", "emoji": "\uD83D\uDE97", "icon": "Car", "frequency": 6},
+      {"label": "train", "emoji": "\uD83D\uDE84", "icon": "Train", "frequency": 5}
+    ]
+  },
+  {
+    "triggerWord": "hello",
+    "concepts": [
+      {"label": "wave", "emoji": "\uD83D\uDC4B", "icon": "Wave", "frequency": 10},
+      {"label": "handshake", "emoji": "\uD83E\uDD1D", "icon": "Handshake", "frequency": 9},
+      {"label": "smile", "emoji": "\uD83D\uDE0A", "icon": "Smile", "frequency": 8},
+      {"label": "peace", "emoji": "✌️", "icon": "Peace", "frequency": 7}
+    ]
+  },
+  {
+    "triggerWord": "love",
+    "concepts": [
+      {"label": "heart", "emoji": "❤️", "icon": "Heart", "frequency": 10},
+      {"label": "kiss", "emoji": "\uD83D\uDE18", "icon": "Kiss", "frequency": 9},
+      {"label": "hug", "emoji": "\uD83E\uDD17", "icon": "Hug", "frequency": 8},
+      {"label": "rose", "emoji": "\uD83C\uDF39", "icon": "Rose", "frequency": 7},
+      {"label": "ring", "emoji": "\uD83D\uDC8D", "icon": "Ring", "frequency": 6}
+    ]
+  },
+  {
+    "triggerWord": "weather",
+    "concepts": [
+      {"label": "sun", "emoji": "☀️", "icon": "Sun", "frequency": 10},
+      {"label": "rain", "emoji": "\uD83C\uDF27️", "icon": "Rain", "frequency": 9},
+      {"label": "snow", "emoji": "❄️", "icon": "Snow", "frequency": 8},
+      {"label": "storm", "emoji": "⛈️", "icon": "Storm", "frequency": 7},
+      {"label": "cloud", "emoji": "☁️", "icon": "Cloud", "frequency": 6}
+    ]
+  },
+  {
+    "triggerWord": "music",
+    "concepts": [
+      {"label": "notes", "emoji": "\uD83C\uDFB5", "icon": "Notes", "frequency": 10},
+      {"label": "guitar", "emoji": "\uD83C\uDFB8", "icon": "Guitar", "frequency": 9},
+      {"label": "mic", "emoji": "\uD83C\uDFA4", "icon": "Mic", "frequency": 8},
+      {"label": "headphones", "emoji": "\uD83C\uDFA7", "icon": "Headphones", "frequency": 7},
+      {"label": "drums", "emoji": "\uD83E\uDD41", "icon": "Drums", "frequency": 6}
+    ]
+  },
+  {
+    "triggerWord": "happy",
+    "concepts": [
+      {"label": "joy", "emoji": "\uD83D\uDE04", "icon": "Joy", "frequency": 10},
+      {"label": "party", "emoji": "\uD83C\uDF89", "icon": "Party", "frequency": 9},
+      {"label": "dance", "emoji": "\uD83D\uDD7A", "icon": "Dance", "frequency": 8},
+      {"label": "celebrate", "emoji": "\uD83C\uDF8A", "icon": "Celebrate", "frequency": 7}
+    ]
+  },
+  {
+    "triggerWord": "game",
+    "concepts": [
+      {"label": "controller", "emoji": "\uD83C\uDFAE", "icon": "Controller", "frequency": 10},
+      {"label": "dice", "emoji": "\uD83C\uDFB2", "icon": "Dice", "frequency": 9},
+      {"label": "trophy", "emoji": "\uD83C\uDFC6", "icon": "Trophy", "frequency": 8},
+      {"label": "target", "emoji": "\uD83C\uDFAF", "icon": "Target", "frequency": 7}
+    ]
+  },
+  {
+    "triggerWord": "home",
+    "concepts": [
+      {"label": "house", "emoji": "\uD83C\uDFE0", "icon": "House", "frequency": 10},
+      {"label": "bed", "emoji": "\uD83D\uDECF️", "icon": "Bed", "frequency": 9},
+      {"label": "couch", "emoji": "\uD83D\uDECB️", "icon": "Couch", "frequency": 8},
+      {"label": "key", "emoji": "\uD83D\uDD11", "icon": "Key", "frequency": 7}
+    ]
+  },
+  {
+    "triggerWord": "movie",
+    "concepts": [
+      {"label": "film", "emoji": "\uD83C\uDFAC", "icon": "Film", "frequency": 10},
+      {"label": "popcorn", "emoji": "\uD83C\uDF7F", "icon": "Popcorn", "frequency": 9},
+      {"label": "ticket", "emoji": "\uD83C\uDFAB", "icon": "Ticket", "frequency": 8},
+      {"label": "star", "emoji": "⭐", "icon": "Star", "frequency": 7}
+    ]
+  }
+]

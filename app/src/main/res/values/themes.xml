@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme -->
+    <style name="Theme.ZType" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/neon_cyan</item>
+        <item name="colorSecondary">@color/neon_magenta</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- CRITICAL: IME Transparent Theme -->
+    <style name="Theme.ZType.IME" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+    </style>
+</resources>

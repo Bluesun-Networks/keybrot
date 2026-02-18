@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cyber-Luminescent palette -->
+    <color name="neon_cyan">#FF00FFFF</color>
+    <color name="neon_magenta">#FFFF00FF</color>
+    <color name="neon_blue">#FF0066FF</color>
+    <color name="neon_green">#FF00FF66</color>
+    <color name="neon_orange">#FFFF6600</color>
+    <color name="dark_void">#FF0A0A1A</color>
+    <color name="dark_surface">#FF121228</color>
+
+    <!-- Glassmorphic palette -->
+    <color name="glass_white">#33FFFFFF</color>
+    <color name="glass_border">#66FFFFFF</color>
+    <color name="glass_text">#EEFFFFFF</color>
+
+    <!-- Solarized palette -->
+    <color name="solar_base03">#FF002B36</color>
+    <color name="solar_base0">#FF839496</color>
+    <color name="solar_yellow">#FFB58900</color>
+    <color name="solar_orange">#FFCB4B16</color>
+    <color name="solar_cyan">#FF2AA198</color>
+</resources>
