@@ -254,11 +254,6 @@ class DivePhysics {
     fun getCurrentSphereRadius(): Float = sphereRadius
 
     /**
-     * Get the current zoom progress (0..1).
-     */
-    fun getZoomProgress(): Float = zoomProgress
-
-    /**
      * Get the current speed (magnitude of velocity).
      */
     fun getSpeed(): Float = sqrt(velocityX * velocityX + velocityY * velocityY)

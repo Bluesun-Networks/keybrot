@@ -150,7 +150,7 @@ class ZTypeRenderer(
         val layoutNodes = nodeLayoutEngine.layoutOnSphere(
             trieNodes,
             divePhysics.getCurrentSphereRadius(),
-            divePhysics.getZoomProgress()
+            divePhysics.zoomProgress
         )
         nodeLayoutEngine.updateAnimation(deltaTime)
 

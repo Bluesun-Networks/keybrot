@@ -105,8 +105,8 @@ class DebugOverlay {
         y -= lineHeight
 
         // Zoom progress
-        val zoomBar = buildZoomBar(divePhysics.getZoomProgress())
-        drawString("zoom: $zoomBar %.0f%%".format(divePhysics.getZoomProgress() * 100),
+        val zoomBar = buildZoomBar(divePhysics.zoomProgress)
+        drawString("zoom: $zoomBar %.0f%%".format(divePhysics.zoomProgress * 100),
             leftMargin, y, charWidth, lineHeight,
             floatArrayOf(0f, 1f, 1f, 0.8f))
         y -= lineHeight
