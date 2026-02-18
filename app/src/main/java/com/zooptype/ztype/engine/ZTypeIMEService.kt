@@ -5,7 +5,6 @@ import android.os.Build
 import android.view.View
 import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
-import androidx.preference.PreferenceManager
 import com.zooptype.ztype.debug.DebugOverlay
 import com.zooptype.ztype.gesture.GestureProcessor
 import com.zooptype.ztype.haptics.HapticEngine
