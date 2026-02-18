@@ -1,163 +1,4026 @@
 [
-  {"word": "the", "frequency": 100},
-  {"word": "be", "frequency": 95},
-  {"word": "to", "frequency": 94},
-  {"word": "of", "frequency": 93},
-  {"word": "and", "frequency": 92},
-  {"word": "a", "frequency": 91},
-  {"word": "in", "frequency": 90},
-  {"word": "that", "frequency": 89},
-  {"word": "have", "frequency": 88},
-  {"word": "i", "frequency": 87},
-  {"word": "it", "frequency": 86},
-  {"word": "for", "frequency": 85},
-  {"word": "not", "frequency": 84},
-  {"word": "on", "frequency": 83},
-  {"word": "with", "frequency": 82},
-  {"word": "he", "frequency": 81},
-  {"word": "as", "frequency": 80},
-  {"word": "you", "frequency": 79},
-  {"word": "do", "frequency": 78},
-  {"word": "at", "frequency": 77},
-  {"word": "this", "frequency": 76},
-  {"word": "but", "frequency": 75},
-  {"word": "his", "frequency": 74},
-  {"word": "by", "frequency": 73},
-  {"word": "from", "frequency": 72},
-  {"word": "they", "frequency": 71},
-  {"word": "we", "frequency": 70},
-  {"word": "say", "frequency": 69},
-  {"word": "her", "frequency": 68},
-  {"word": "she", "frequency": 67},
-  {"word": "or", "frequency": 66},
-  {"word": "an", "frequency": 65},
-  {"word": "will", "frequency": 64},
-  {"word": "my", "frequency": 63},
-  {"word": "one", "frequency": 62},
-  {"word": "all", "frequency": 61},
-  {"word": "would", "frequency": 60},
-  {"word": "there", "frequency": 59},
-  {"word": "their", "frequency": 58},
-  {"word": "what", "frequency": 57},
-  {"word": "so", "frequency": 56},
-  {"word": "up", "frequency": 55},
-  {"word": "out", "frequency": 54},
-  {"word": "if", "frequency": 53},
-  {"word": "about", "frequency": 52},
-  {"word": "who", "frequency": 51},
-  {"word": "get", "frequency": 50},
-  {"word": "which", "frequency": 49},
-  {"word": "go", "frequency": 48},
-  {"word": "me", "frequency": 47},
-  {"word": "when", "frequency": 46},
-  {"word": "make", "frequency": 45},
-  {"word": "can", "frequency": 44},
-  {"word": "like", "frequency": 43},
-  {"word": "time", "frequency": 42},
-  {"word": "no", "frequency": 41},
-  {"word": "just", "frequency": 40},
-  {"word": "him", "frequency": 39},
-  {"word": "know", "frequency": 38},
-  {"word": "take", "frequency": 37},
-  {"word": "people", "frequency": 36},
-  {"word": "into", "frequency": 35},
-  {"word": "year", "frequency": 34},
-  {"word": "your", "frequency": 33},
-  {"word": "good", "frequency": 32},
-  {"word": "some", "frequency": 31},
-  {"word": "could", "frequency": 30},
-  {"word": "them", "frequency": 29},
-  {"word": "see", "frequency": 28},
-  {"word": "other", "frequency": 27},
-  {"word": "than", "frequency": 26},
-  {"word": "then", "frequency": 25},
-  {"word": "now", "frequency": 24},
-  {"word": "look", "frequency": 23},
-  {"word": "only", "frequency": 22},
-  {"word": "come", "frequency": 21},
-  {"word": "its", "frequency": 20},
-  {"word": "over", "frequency": 19},
-  {"word": "think", "frequency": 18},
-  {"word": "also", "frequency": 17},
-  {"word": "back", "frequency": 16},
-  {"word": "after", "frequency": 15},
-  {"word": "use", "frequency": 14},
-  {"word": "two", "frequency": 13},
-  {"word": "how", "frequency": 12},
-  {"word": "our", "frequency": 11},
-  {"word": "work", "frequency": 10},
-  {"word": "first", "frequency": 9},
-  {"word": "well", "frequency": 8},
-  {"word": "way", "frequency": 7},
-  {"word": "even", "frequency": 6},
-  {"word": "new", "frequency": 5},
-  {"word": "want", "frequency": 4},
-  {"word": "because", "frequency": 3},
-  {"word": "any", "frequency": 2},
-  {"word": "these", "frequency": 1},
-  {"word": "give", "frequency": 1},
-  {"word": "day", "frequency": 1},
-  {"word": "most", "frequency": 1},
-  {"word": "us", "frequency": 1},
-  {"word": "hello", "frequency": 50},
-  {"word": "hi", "frequency": 48},
-  {"word": "hey", "frequency": 45},
-  {"word": "thanks", "frequency": 40},
-  {"word": "thank", "frequency": 40},
-  {"word": "please", "frequency": 38},
-  {"word": "sorry", "frequency": 35},
-  {"word": "yes", "frequency": 60},
-  {"word": "okay", "frequency": 55},
-  {"word": "ok", "frequency": 54},
-  {"word": "sure", "frequency": 45},
-  {"word": "great", "frequency": 40},
-  {"word": "love", "frequency": 50},
-  {"word": "happy", "frequency": 35},
-  {"word": "food", "frequency": 30},
-  {"word": "eat", "frequency": 28},
-  {"word": "travel", "frequency": 25},
-  {"word": "car", "frequency": 22},
-  {"word": "home", "frequency": 40},
-  {"word": "beach", "frequency": 20},
-  {"word": "weather", "frequency": 18},
-  {"word": "music", "frequency": 25},
-  {"word": "movie", "frequency": 22},
-  {"word": "game", "frequency": 20},
-  {"word": "here", "frequency": 45},
-  {"word": "help", "frequency": 42},
-  {"word": "need", "frequency": 38},
-  {"word": "right", "frequency": 36},
-  {"word": "still", "frequency": 34},
-  {"word": "should", "frequency": 33},
-  {"word": "call", "frequency": 31},
-  {"word": "world", "frequency": 30},
-  {"word": "long", "frequency": 29},
-  {"word": "where", "frequency": 28},
-  {"word": "life", "frequency": 27},
-  {"word": "much", "frequency": 26},
-  {"word": "hand", "frequency": 25},
-  {"word": "high", "frequency": 24},
-  {"word": "keep", "frequency": 23},
-  {"word": "last", "frequency": 22},
-  {"word": "let", "frequency": 21},
-  {"word": "begin", "frequency": 20},
-  {"word": "start", "frequency": 19},
-  {"word": "might", "frequency": 18},
-  {"word": "never", "frequency": 17},
-  {"word": "too", "frequency": 16},
-  {"word": "does", "frequency": 15},
-  {"word": "stop", "frequency": 14},
-  {"word": "every", "frequency": 13},
-  {"word": "always", "frequency": 12},
-  {"word": "done", "frequency": 11},
-  {"word": "going", "frequency": 10},
-  {"word": "really", "frequency": 9},
-  {"word": "night", "frequency": 8},
-  {"word": "morning", "frequency": 7},
-  {"word": "today", "frequency": 6},
-  {"word": "tomorrow", "frequency": 5},
-  {"word": "friend", "frequency": 4},
-  {"word": "family", "frequency": 3},
-  {"word": "school", "frequency": 2},
-  {"word": "phone", "frequency": 1}
+  {
+    "word": "the",
+    "frequency": 1000
+  },
+  {
+    "word": "be",
+    "frequency": 707
+  },
+  {
+    "word": "to",
+    "frequency": 577
+  },
+  {
+    "word": "of",
+    "frequency": 500
+  },
+  {
+    "word": "and",
+    "frequency": 447
+  },
+  {
+    "word": "a",
+    "frequency": 408
+  },
+  {
+    "word": "in",
+    "frequency": 377
+  },
+  {
+    "word": "that",
+    "frequency": 353
+  },
+  {
+    "word": "have",
+    "frequency": 333
+  },
+  {
+    "word": "i",
+    "frequency": 316
+  },
+  {
+    "word": "it",
+    "frequency": 301
+  },
+  {
+    "word": "for",
+    "frequency": 288
+  },
+  {
+    "word": "not",
+    "frequency": 277
+  },
+  {
+    "word": "on",
+    "frequency": 267
+  },
+  {
+    "word": "with",
+    "frequency": 258
+  },
+  {
+    "word": "he",
+    "frequency": 250
+  },
+  {
+    "word": "as",
+    "frequency": 242
+  },
+  {
+    "word": "you",
+    "frequency": 235
+  },
+  {
+    "word": "do",
+    "frequency": 229
+  },
+  {
+    "word": "at",
+    "frequency": 223
+  },
+  {
+    "word": "this",
+    "frequency": 218
+  },
+  {
+    "word": "but",
+    "frequency": 213
+  },
+  {
+    "word": "his",
+    "frequency": 208
+  },
+  {
+    "word": "by",
+    "frequency": 204
+  },
+  {
+    "word": "from",
+    "frequency": 200
+  },
+  {
+    "word": "they",
+    "frequency": 196
+  },
+  {
+    "word": "we",
+    "frequency": 192
+  },
+  {
+    "word": "say",
+    "frequency": 188
+  },
+  {
+    "word": "her",
+    "frequency": 185
+  },
+  {
+    "word": "she",
+    "frequency": 182
+  },
+  {
+    "word": "or",
+    "frequency": 179
+  },
+  {
+    "word": "an",
+    "frequency": 176
+  },
+  {
+    "word": "will",
+    "frequency": 174
+  },
+  {
+    "word": "my",
+    "frequency": 171
+  },
+  {
+    "word": "one",
+    "frequency": 169
+  },
+  {
+    "word": "all",
+    "frequency": 166
+  },
+  {
+    "word": "would",
+    "frequency": 164
+  },
+  {
+    "word": "there",
+    "frequency": 162
+  },
+  {
+    "word": "their",
+    "frequency": 160
+  },
+  {
+    "word": "what",
+    "frequency": 158
+  },
+  {
+    "word": "so",
+    "frequency": 156
+  },
+  {
+    "word": "up",
+    "frequency": 154
+  },
+  {
+    "word": "out",
+    "frequency": 152
+  },
+  {
+    "word": "if",
+    "frequency": 150
+  },
+  {
+    "word": "about",
+    "frequency": 149
+  },
+  {
+    "word": "who",
+    "frequency": 147
+  },
+  {
+    "word": "get",
+    "frequency": 145
+  },
+  {
+    "word": "which",
+    "frequency": 144
+  },
+  {
+    "word": "go",
+    "frequency": 142
+  },
+  {
+    "word": "me",
+    "frequency": 141
+  },
+  {
+    "word": "when",
+    "frequency": 140
+  },
+  {
+    "word": "make",
+    "frequency": 138
+  },
+  {
+    "word": "can",
+    "frequency": 137
+  },
+  {
+    "word": "like",
+    "frequency": 136
+  },
+  {
+    "word": "time",
+    "frequency": 134
+  },
+  {
+    "word": "no",
+    "frequency": 133
+  },
+  {
+    "word": "just",
+    "frequency": 132
+  },
+  {
+    "word": "him",
+    "frequency": 131
+  },
+  {
+    "word": "know",
+    "frequency": 130
+  },
+  {
+    "word": "take",
+    "frequency": 129
+  },
+  {
+    "word": "people",
+    "frequency": 128
+  },
+  {
+    "word": "into",
+    "frequency": 127
+  },
+  {
+    "word": "year",
+    "frequency": 125
+  },
+  {
+    "word": "your",
+    "frequency": 125
+  },
+  {
+    "word": "good",
+    "frequency": 124
+  },
+  {
+    "word": "some",
+    "frequency": 123
+  },
+  {
+    "word": "could",
+    "frequency": 122
+  },
+  {
+    "word": "them",
+    "frequency": 121
+  },
+  {
+    "word": "see",
+    "frequency": 120
+  },
+  {
+    "word": "other",
+    "frequency": 119
+  },
+  {
+    "word": "than",
+    "frequency": 118
+  },
+  {
+    "word": "then",
+    "frequency": 117
+  },
+  {
+    "word": "now",
+    "frequency": 117
+  },
+  {
+    "word": "look",
+    "frequency": 116
+  },
+  {
+    "word": "only",
+    "frequency": 115
+  },
+  {
+    "word": "come",
+    "frequency": 114
+  },
+  {
+    "word": "its",
+    "frequency": 113
+  },
+  {
+    "word": "over",
+    "frequency": 113
+  },
+  {
+    "word": "think",
+    "frequency": 112
+  },
+  {
+    "word": "also",
+    "frequency": 111
+  },
+  {
+    "word": "back",
+    "frequency": 111
+  },
+  {
+    "word": "after",
+    "frequency": 110
+  },
+  {
+    "word": "use",
+    "frequency": 109
+  },
+  {
+    "word": "two",
+    "frequency": 109
+  },
+  {
+    "word": "how",
+    "frequency": 108
+  },
+  {
+    "word": "our",
+    "frequency": 107
+  },
+  {
+    "word": "work",
+    "frequency": 107
+  },
+  {
+    "word": "first",
+    "frequency": 106
+  },
+  {
+    "word": "well",
+    "frequency": 105
+  },
+  {
+    "word": "way",
+    "frequency": 105
+  },
+  {
+    "word": "even",
+    "frequency": 104
+  },
+  {
+    "word": "new",
+    "frequency": 104
+  },
+  {
+    "word": "want",
+    "frequency": 103
+  },
+  {
+    "word": "because",
+    "frequency": 103
+  },
+  {
+    "word": "any",
+    "frequency": 102
+  },
+  {
+    "word": "these",
+    "frequency": 102
+  },
+  {
+    "word": "give",
+    "frequency": 101
+  },
+  {
+    "word": "day",
+    "frequency": 101
+  },
+  {
+    "word": "most",
+    "frequency": 100
+  },
+  {
+    "word": "us",
+    "frequency": 100
+  },
+  {
+    "word": "hello",
+    "frequency": 99
+  },
+  {
+    "word": "hi",
+    "frequency": 99
+  },
+  {
+    "word": "hey",
+    "frequency": 98
+  },
+  {
+    "word": "thanks",
+    "frequency": 98
+  },
+  {
+    "word": "thank",
+    "frequency": 97
+  },
+  {
+    "word": "please",
+    "frequency": 97
+  },
+  {
+    "word": "sorry",
+    "frequency": 96
+  },
+  {
+    "word": "yes",
+    "frequency": 96
+  },
+  {
+    "word": "okay",
+    "frequency": 95
+  },
+  {
+    "word": "ok",
+    "frequency": 95
+  },
+  {
+    "word": "sure",
+    "frequency": 94
+  },
+  {
+    "word": "great",
+    "frequency": 94
+  },
+  {
+    "word": "love",
+    "frequency": 94
+  },
+  {
+    "word": "happy",
+    "frequency": 93
+  },
+  {
+    "word": "food",
+    "frequency": 93
+  },
+  {
+    "word": "eat",
+    "frequency": 92
+  },
+  {
+    "word": "travel",
+    "frequency": 92
+  },
+  {
+    "word": "car",
+    "frequency": 92
+  },
+  {
+    "word": "home",
+    "frequency": 91
+  },
+  {
+    "word": "beach",
+    "frequency": 91
+  },
+  {
+    "word": "weather",
+    "frequency": 90
+  },
+  {
+    "word": "music",
+    "frequency": 90
+  },
+  {
+    "word": "movie",
+    "frequency": 90
+  },
+  {
+    "word": "game",
+    "frequency": 89
+  },
+  {
+    "word": "here",
+    "frequency": 89
+  },
+  {
+    "word": "help",
+    "frequency": 89
+  },
+  {
+    "word": "need",
+    "frequency": 88
+  },
+  {
+    "word": "right",
+    "frequency": 88
+  },
+  {
+    "word": "still",
+    "frequency": 88
+  },
+  {
+    "word": "should",
+    "frequency": 87
+  },
+  {
+    "word": "call",
+    "frequency": 87
+  },
+  {
+    "word": "world",
+    "frequency": 87
+  },
+  {
+    "word": "long",
+    "frequency": 86
+  },
+  {
+    "word": "where",
+    "frequency": 86
+  },
+  {
+    "word": "life",
+    "frequency": 86
+  },
+  {
+    "word": "much",
+    "frequency": 85
+  },
+  {
+    "word": "hand",
+    "frequency": 85
+  },
+  {
+    "word": "high",
+    "frequency": 85
+  },
+  {
+    "word": "keep",
+    "frequency": 84
+  },
+  {
+    "word": "last",
+    "frequency": 84
+  },
+  {
+    "word": "let",
+    "frequency": 84
+  },
+  {
+    "word": "begin",
+    "frequency": 83
+  },
+  {
+    "word": "start",
+    "frequency": 83
+  },
+  {
+    "word": "might",
+    "frequency": 83
+  },
+  {
+    "word": "never",
+    "frequency": 83
+  },
+  {
+    "word": "too",
+    "frequency": 82
+  },
+  {
+    "word": "does",
+    "frequency": 82
+  },
+  {
+    "word": "stop",
+    "frequency": 82
+  },
+  {
+    "word": "every",
+    "frequency": 81
+  },
+  {
+    "word": "always",
+    "frequency": 81
+  },
+  {
+    "word": "done",
+    "frequency": 81
+  },
+  {
+    "word": "going",
+    "frequency": 81
+  },
+  {
+    "word": "really",
+    "frequency": 80
+  },
+  {
+    "word": "night",
+    "frequency": 80
+  },
+  {
+    "word": "morning",
+    "frequency": 80
+  },
+  {
+    "word": "today",
+    "frequency": 80
+  },
+  {
+    "word": "tomorrow",
+    "frequency": 79
+  },
+  {
+    "word": "friend",
+    "frequency": 79
+  },
+  {
+    "word": "family",
+    "frequency": 79
+  },
+  {
+    "word": "school",
+    "frequency": 79
+  },
+  {
+    "word": "phone",
+    "frequency": 78
+  },
+  {
+    "word": "man",
+    "frequency": 78
+  },
+  {
+    "word": "woman",
+    "frequency": 78
+  },
+  {
+    "word": "child",
+    "frequency": 78
+  },
+  {
+    "word": "part",
+    "frequency": 77
+  },
+  {
+    "word": "place",
+    "frequency": 77
+  },
+  {
+    "word": "case",
+    "frequency": 77
+  },
+  {
+    "word": "week",
+    "frequency": 77
+  },
+  {
+    "word": "company",
+    "frequency": 76
+  },
+  {
+    "word": "system",
+    "frequency": 76
+  },
+  {
+    "word": "program",
+    "frequency": 76
+  },
+  {
+    "word": "question",
+    "frequency": 76
+  },
+  {
+    "word": "house",
+    "frequency": 76
+  },
+  {
+    "word": "point",
+    "frequency": 75
+  },
+  {
+    "word": "government",
+    "frequency": 75
+  },
+  {
+    "word": "number",
+    "frequency": 75
+  },
+  {
+    "word": "area",
+    "frequency": 75
+  },
+  {
+    "word": "course",
+    "frequency": 74
+  },
+  {
+    "word": "water",
+    "frequency": 74
+  },
+  {
+    "word": "room",
+    "frequency": 74
+  },
+  {
+    "word": "mother",
+    "frequency": 74
+  },
+  {
+    "word": "head",
+    "frequency": 74
+  },
+  {
+    "word": "group",
+    "frequency": 73
+  },
+  {
+    "word": "children",
+    "frequency": 73
+  },
+  {
+    "word": "money",
+    "frequency": 73
+  },
+  {
+    "word": "story",
+    "frequency": 73
+  },
+  {
+    "word": "fact",
+    "frequency": 73
+  },
+  {
+    "word": "month",
+    "frequency": 72
+  },
+  {
+    "word": "lot",
+    "frequency": 72
+  },
+  {
+    "word": "order",
+    "frequency": 72
+  },
+  {
+    "word": "eye",
+    "frequency": 72
+  },
+  {
+    "word": "door",
+    "frequency": 72
+  },
+  {
+    "word": "thing",
+    "frequency": 71
+  },
+  {
+    "word": "old",
+    "frequency": 71
+  },
+  {
+    "word": "boy",
+    "frequency": 71
+  },
+  {
+    "word": "office",
+    "frequency": 71
+  },
+  {
+    "word": "young",
+    "frequency": 71
+  },
+  {
+    "word": "end",
+    "frequency": 71
+  },
+  {
+    "word": "body",
+    "frequency": 70
+  },
+  {
+    "word": "side",
+    "frequency": 70
+  },
+  {
+    "word": "market",
+    "frequency": 70
+  },
+  {
+    "word": "each",
+    "frequency": 70
+  },
+  {
+    "word": "form",
+    "frequency": 70
+  },
+  {
+    "word": "hear",
+    "frequency": 70
+  },
+  {
+    "word": "upon",
+    "frequency": 69
+  },
+  {
+    "word": "party",
+    "frequency": 69
+  },
+  {
+    "word": "within",
+    "frequency": 69
+  },
+  {
+    "word": "pick",
+    "frequency": 69
+  },
+  {
+    "word": "turn",
+    "frequency": 69
+  },
+  {
+    "word": "key",
+    "frequency": 69
+  },
+  {
+    "word": "run",
+    "frequency": 68
+  },
+  {
+    "word": "press",
+    "frequency": 68
+  },
+  {
+    "word": "grow",
+    "frequency": 68
+  },
+  {
+    "word": "open",
+    "frequency": 68
+  },
+  {
+    "word": "walk",
+    "frequency": 68
+  },
+  {
+    "word": "seem",
+    "frequency": 68
+  },
+  {
+    "word": "next",
+    "frequency": 67
+  },
+  {
+    "word": "live",
+    "frequency": 67
+  },
+  {
+    "word": "problem",
+    "frequency": 67
+  },
+  {
+    "word": "both",
+    "frequency": 67
+  },
+  {
+    "word": "play",
+    "frequency": 67
+  },
+  {
+    "word": "free",
+    "frequency": 67
+  },
+  {
+    "word": "stand",
+    "frequency": 66
+  },
+  {
+    "word": "himself",
+    "frequency": 66
+  },
+  {
+    "word": "ten",
+    "frequency": 66
+  },
+  {
+    "word": "girl",
+    "frequency": 66
+  },
+  {
+    "word": "bring",
+    "frequency": 66
+  },
+  {
+    "word": "along",
+    "frequency": 66
+  },
+  {
+    "word": "left",
+    "frequency": 66
+  },
+  {
+    "word": "small",
+    "frequency": 65
+  },
+  {
+    "word": "try",
+    "frequency": 65
+  },
+  {
+    "word": "hard",
+    "frequency": 65
+  },
+  {
+    "word": "heart",
+    "frequency": 65
+  },
+  {
+    "word": "past",
+    "frequency": 65
+  },
+  {
+    "word": "pull",
+    "frequency": 65
+  },
+  {
+    "word": "full",
+    "frequency": 65
+  },
+  {
+    "word": "knew",
+    "frequency": 64
+  },
+  {
+    "word": "street",
+    "frequency": 64
+  },
+  {
+    "word": "lead",
+    "frequency": 64
+  },
+  {
+    "word": "charge",
+    "frequency": 64
+  },
+  {
+    "word": "cut",
+    "frequency": 64
+  },
+  {
+    "word": "figure",
+    "frequency": 64
+  },
+  {
+    "word": "size",
+    "frequency": 64
+  },
+  {
+    "word": "else",
+    "frequency": 64
+  },
+  {
+    "word": "rose",
+    "frequency": 63
+  },
+  {
+    "word": "plant",
+    "frequency": 63
+  },
+  {
+    "word": "south",
+    "frequency": 63
+  },
+  {
+    "word": "quite",
+    "frequency": 63
+  },
+  {
+    "word": "check",
+    "frequency": 63
+  },
+  {
+    "word": "king",
+    "frequency": 63
+  },
+  {
+    "word": "white",
+    "frequency": 63
+  },
+  {
+    "word": "move",
+    "frequency": 62
+  },
+  {
+    "word": "price",
+    "frequency": 62
+  },
+  {
+    "word": "already",
+    "frequency": 62
+  },
+  {
+    "word": "sit",
+    "frequency": 62
+  },
+  {
+    "word": "able",
+    "frequency": 62
+  },
+  {
+    "word": "close",
+    "frequency": 62
+  },
+  {
+    "word": "book",
+    "frequency": 62
+  },
+  {
+    "word": "early",
+    "frequency": 62
+  },
+  {
+    "word": "carry",
+    "frequency": 62
+  },
+  {
+    "word": "state",
+    "frequency": 61
+  },
+  {
+    "word": "once",
+    "frequency": 61
+  },
+  {
+    "word": "learn",
+    "frequency": 61
+  },
+  {
+    "word": "happen",
+    "frequency": 61
+  },
+  {
+    "word": "field",
+    "frequency": 61
+  },
+  {
+    "word": "late",
+    "frequency": 61
+  },
+  {
+    "word": "word",
+    "frequency": 61
+  },
+  {
+    "word": "mean",
+    "frequency": 61
+  },
+  {
+    "word": "lose",
+    "frequency": 60
+  },
+  {
+    "word": "power",
+    "frequency": 60
+  },
+  {
+    "word": "light",
+    "frequency": 60
+  },
+  {
+    "word": "war",
+    "frequency": 60
+  },
+  {
+    "word": "million",
+    "frequency": 60
+  },
+  {
+    "word": "off",
+    "frequency": 60
+  },
+  {
+    "word": "view",
+    "frequency": 60
+  },
+  {
+    "word": "idea",
+    "frequency": 60
+  },
+  {
+    "word": "term",
+    "frequency": 60
+  },
+  {
+    "word": "issue",
+    "frequency": 59
+  },
+  {
+    "word": "large",
+    "frequency": 59
+  },
+  {
+    "word": "change",
+    "frequency": 59
+  },
+  {
+    "word": "service",
+    "frequency": 59
+  },
+  {
+    "word": "present",
+    "frequency": 59
+  },
+  {
+    "word": "same",
+    "frequency": 59
+  },
+  {
+    "word": "age",
+    "frequency": 59
+  },
+  {
+    "word": "show",
+    "frequency": 59
+  },
+  {
+    "word": "few",
+    "frequency": 59
+  },
+  {
+    "word": "public",
+    "frequency": 59
+  },
+  {
+    "word": "send",
+    "frequency": 58
+  },
+  {
+    "word": "may",
+    "frequency": 58
+  },
+  {
+    "word": "ask",
+    "frequency": 58
+  },
+  {
+    "word": "find",
+    "frequency": 58
+  },
+  {
+    "word": "read",
+    "frequency": 58
+  },
+  {
+    "word": "student",
+    "frequency": 58
+  },
+  {
+    "word": "near",
+    "frequency": 58
+  },
+  {
+    "word": "put",
+    "frequency": 58
+  },
+  {
+    "word": "such",
+    "frequency": 58
+  },
+  {
+    "word": "tell",
+    "frequency": 58
+  },
+  {
+    "word": "write",
+    "frequency": 57
+  },
+  {
+    "word": "between",
+    "frequency": 57
+  },
+  {
+    "word": "set",
+    "frequency": 57
+  },
+  {
+    "word": "talk",
+    "frequency": 57
+  },
+  {
+    "word": "own",
+    "frequency": 57
+  },
+  {
+    "word": "under",
+    "frequency": 57
+  },
+  {
+    "word": "general",
+    "frequency": 57
+  },
+  {
+    "word": "another",
+    "frequency": 57
+  },
+  {
+    "word": "name",
+    "frequency": 57
+  },
+  {
+    "word": "little",
+    "frequency": 57
+  },
+  {
+    "word": "before",
+    "frequency": 56
+  },
+  {
+    "word": "bad",
+    "frequency": 56
+  },
+  {
+    "word": "low",
+    "frequency": 56
+  },
+  {
+    "word": "short",
+    "frequency": 56
+  },
+  {
+    "word": "big",
+    "frequency": 56
+  },
+  {
+    "word": "kind",
+    "frequency": 56
+  },
+  {
+    "word": "second",
+    "frequency": 56
+  },
+  {
+    "word": "half",
+    "frequency": 56
+  },
+  {
+    "word": "top",
+    "frequency": 56
+  },
+  {
+    "word": "feel",
+    "frequency": 56
+  },
+  {
+    "word": "leave",
+    "frequency": 56
+  },
+  {
+    "word": "hold",
+    "frequency": 55
+  },
+  {
+    "word": "understand",
+    "frequency": 55
+  },
+  {
+    "word": "allow",
+    "frequency": 55
+  },
+  {
+    "word": "add",
+    "frequency": 55
+  },
+  {
+    "word": "follow",
+    "frequency": 55
+  },
+  {
+    "word": "meet",
+    "frequency": 55
+  },
+  {
+    "word": "pay",
+    "frequency": 55
+  },
+  {
+    "word": "line",
+    "frequency": 55
+  },
+  {
+    "word": "must",
+    "frequency": 55
+  },
+  {
+    "word": "nothing",
+    "frequency": 55
+  },
+  {
+    "word": "often",
+    "frequency": 55
+  },
+  {
+    "word": "until",
+    "frequency": 55
+  },
+  {
+    "word": "very",
+    "frequency": 54
+  },
+  {
+    "word": "air",
+    "frequency": 54
+  },
+  {
+    "word": "arm",
+    "frequency": 54
+  },
+  {
+    "word": "art",
+    "frequency": 54
+  },
+  {
+    "word": "baby",
+    "frequency": 54
+  },
+  {
+    "word": "base",
+    "frequency": 54
+  },
+  {
+    "word": "bit",
+    "frequency": 54
+  },
+  {
+    "word": "box",
+    "frequency": 54
+  },
+  {
+    "word": "build",
+    "frequency": 54
+  },
+  {
+    "word": "bus",
+    "frequency": 54
+  },
+  {
+    "word": "business",
+    "frequency": 54
+  },
+  {
+    "word": "buy",
+    "frequency": 54
+  },
+  {
+    "word": "care",
+    "frequency": 53
+  },
+  {
+    "word": "catch",
+    "frequency": 53
+  },
+  {
+    "word": "cell",
+    "frequency": 53
+  },
+  {
+    "word": "city",
+    "frequency": 53
+  },
+  {
+    "word": "class",
+    "frequency": 53
+  },
+  {
+    "word": "clear",
+    "frequency": 53
+  },
+  {
+    "word": "cold",
+    "frequency": 53
+  },
+  {
+    "word": "common",
+    "frequency": 53
+  },
+  {
+    "word": "community",
+    "frequency": 53
+  },
+  {
+    "word": "computer",
+    "frequency": 53
+  },
+  {
+    "word": "control",
+    "frequency": 53
+  },
+  {
+    "word": "cost",
+    "frequency": 53
+  },
+  {
+    "word": "country",
+    "frequency": 53
+  },
+  {
+    "word": "cover",
+    "frequency": 52
+  },
+  {
+    "word": "create",
+    "frequency": 52
+  },
+  {
+    "word": "dark",
+    "frequency": 52
+  },
+  {
+    "word": "data",
+    "frequency": 52
+  },
+  {
+    "word": "deal",
+    "frequency": 52
+  },
+  {
+    "word": "death",
+    "frequency": 52
+  },
+  {
+    "word": "decide",
+    "frequency": 52
+  },
+  {
+    "word": "deep",
+    "frequency": 52
+  },
+  {
+    "word": "degree",
+    "frequency": 52
+  },
+  {
+    "word": "develop",
+    "frequency": 52
+  },
+  {
+    "word": "die",
+    "frequency": 52
+  },
+  {
+    "word": "different",
+    "frequency": 52
+  },
+  {
+    "word": "dinner",
+    "frequency": 52
+  },
+  {
+    "word": "direction",
+    "frequency": 52
+  },
+  {
+    "word": "doctor",
+    "frequency": 51
+  },
+  {
+    "word": "dog",
+    "frequency": 51
+  },
+  {
+    "word": "draw",
+    "frequency": 51
+  },
+  {
+    "word": "drive",
+    "frequency": 51
+  },
+  {
+    "word": "drop",
+    "frequency": 51
+  },
+  {
+    "word": "during",
+    "frequency": 51
+  },
+  {
+    "word": "east",
+    "frequency": 51
+  },
+  {
+    "word": "education",
+    "frequency": 51
+  },
+  {
+    "word": "effect",
+    "frequency": 51
+  },
+  {
+    "word": "eight",
+    "frequency": 51
+  },
+  {
+    "word": "either",
+    "frequency": 51
+  },
+  {
+    "word": "energy",
+    "frequency": 51
+  },
+  {
+    "word": "enjoy",
+    "frequency": 51
+  },
+  {
+    "word": "enough",
+    "frequency": 51
+  },
+  {
+    "word": "enter",
+    "frequency": 51
+  },
+  {
+    "word": "environment",
+    "frequency": 50
+  },
+  {
+    "word": "especially",
+    "frequency": 50
+  },
+  {
+    "word": "european",
+    "frequency": 50
+  },
+  {
+    "word": "event",
+    "frequency": 50
+  },
+  {
+    "word": "ever",
+    "frequency": 50
+  },
+  {
+    "word": "everything",
+    "frequency": 50
+  },
+  {
+    "word": "evidence",
+    "frequency": 50
+  },
+  {
+    "word": "exactly",
+    "frequency": 50
+  },
+  {
+    "word": "example",
+    "frequency": 50
+  },
+  {
+    "word": "experience",
+    "frequency": 50
+  },
+  {
+    "word": "face",
+    "frequency": 50
+  },
+  {
+    "word": "fail",
+    "frequency": 50
+  },
+  {
+    "word": "far",
+    "frequency": 50
+  },
+  {
+    "word": "father",
+    "frequency": 50
+  },
+  {
+    "word": "fight",
+    "frequency": 50
+  },
+  {
+    "word": "fill",
+    "frequency": 50
+  },
+  {
+    "word": "final",
+    "frequency": 49
+  },
+  {
+    "word": "financial",
+    "frequency": 49
+  },
+  {
+    "word": "fine",
+    "frequency": 49
+  },
+  {
+    "word": "finger",
+    "frequency": 49
+  },
+  {
+    "word": "fish",
+    "frequency": 49
+  },
+  {
+    "word": "five",
+    "frequency": 49
+  },
+  {
+    "word": "floor",
+    "frequency": 49
+  },
+  {
+    "word": "fly",
+    "frequency": 49
+  },
+  {
+    "word": "foot",
+    "frequency": 49
+  },
+  {
+    "word": "force",
+    "frequency": 49
+  },
+  {
+    "word": "foreign",
+    "frequency": 49
+  },
+  {
+    "word": "forget",
+    "frequency": 49
+  },
+  {
+    "word": "four",
+    "frequency": 49
+  },
+  {
+    "word": "fund",
+    "frequency": 49
+  },
+  {
+    "word": "future",
+    "frequency": 49
+  },
+  {
+    "word": "garden",
+    "frequency": 49
+  },
+  {
+    "word": "gas",
+    "frequency": 48
+  },
+  {
+    "word": "glass",
+    "frequency": 48
+  },
+  {
+    "word": "goal",
+    "frequency": 48
+  },
+  {
+    "word": "green",
+    "frequency": 48
+  },
+  {
+    "word": "ground",
+    "frequency": 48
+  },
+  {
+    "word": "guess",
+    "frequency": 48
+  },
+  {
+    "word": "gun",
+    "frequency": 48
+  },
+  {
+    "word": "guy",
+    "frequency": 48
+  },
+  {
+    "word": "hair",
+    "frequency": 48
+  },
+  {
+    "word": "hang",
+    "frequency": 48
+  },
+  {
+    "word": "health",
+    "frequency": 48
+  },
+  {
+    "word": "heavy",
+    "frequency": 48
+  },
+  {
+    "word": "herself",
+    "frequency": 48
+  },
+  {
+    "word": "hit",
+    "frequency": 48
+  },
+  {
+    "word": "hole",
+    "frequency": 48
+  },
+  {
+    "word": "hope",
+    "frequency": 48
+  },
+  {
+    "word": "hot",
+    "frequency": 48
+  },
+  {
+    "word": "hotel",
+    "frequency": 48
+  },
+  {
+    "word": "huge",
+    "frequency": 47
+  },
+  {
+    "word": "human",
+    "frequency": 47
+  },
+  {
+    "word": "hundred",
+    "frequency": 47
+  },
+  {
+    "word": "husband",
+    "frequency": 47
+  },
+  {
+    "word": "imagine",
+    "frequency": 47
+  },
+  {
+    "word": "important",
+    "frequency": 47
+  },
+  {
+    "word": "include",
+    "frequency": 47
+  },
+  {
+    "word": "increase",
+    "frequency": 47
+  },
+  {
+    "word": "indicate",
+    "frequency": 47
+  },
+  {
+    "word": "industry",
+    "frequency": 47
+  },
+  {
+    "word": "information",
+    "frequency": 47
+  },
+  {
+    "word": "instead",
+    "frequency": 47
+  },
+  {
+    "word": "interest",
+    "frequency": 47
+  },
+  {
+    "word": "international",
+    "frequency": 47
+  },
+  {
+    "word": "interview",
+    "frequency": 47
+  },
+  {
+    "word": "involve",
+    "frequency": 47
+  },
+  {
+    "word": "item",
+    "frequency": 47
+  },
+  {
+    "word": "job",
+    "frequency": 47
+  },
+  {
+    "word": "join",
+    "frequency": 46
+  },
+  {
+    "word": "kid",
+    "frequency": 46
+  },
+  {
+    "word": "kill",
+    "frequency": 46
+  },
+  {
+    "word": "kitchen",
+    "frequency": 46
+  },
+  {
+    "word": "law",
+    "frequency": 46
+  },
+  {
+    "word": "lawyer",
+    "frequency": 46
+  },
+  {
+    "word": "lay",
+    "frequency": 46
+  },
+  {
+    "word": "leg",
+    "frequency": 46
+  },
+  {
+    "word": "less",
+    "frequency": 46
+  },
+  {
+    "word": "letter",
+    "frequency": 46
+  },
+  {
+    "word": "level",
+    "frequency": 46
+  },
+  {
+    "word": "lie",
+    "frequency": 46
+  },
+  {
+    "word": "likely",
+    "frequency": 46
+  },
+  {
+    "word": "list",
+    "frequency": 46
+  },
+  {
+    "word": "listen",
+    "frequency": 46
+  },
+  {
+    "word": "machine",
+    "frequency": 46
+  },
+  {
+    "word": "main",
+    "frequency": 46
+  },
+  {
+    "word": "major",
+    "frequency": 46
+  },
+  {
+    "word": "manage",
+    "frequency": 46
+  },
+  {
+    "word": "manager",
+    "frequency": 46
+  },
+  {
+    "word": "many",
+    "frequency": 45
+  },
+  {
+    "word": "material",
+    "frequency": 45
+  },
+  {
+    "word": "matter",
+    "frequency": 45
+  },
+  {
+    "word": "maybe",
+    "frequency": 45
+  },
+  {
+    "word": "measure",
+    "frequency": 45
+  },
+  {
+    "word": "media",
+    "frequency": 45
+  },
+  {
+    "word": "medical",
+    "frequency": 45
+  },
+  {
+    "word": "meeting",
+    "frequency": 45
+  },
+  {
+    "word": "memory",
+    "frequency": 45
+  },
+  {
+    "word": "mention",
+    "frequency": 45
+  },
+  {
+    "word": "message",
+    "frequency": 45
+  },
+  {
+    "word": "method",
+    "frequency": 45
+  },
+  {
+    "word": "middle",
+    "frequency": 45
+  },
+  {
+    "word": "military",
+    "frequency": 45
+  },
+  {
+    "word": "mind",
+    "frequency": 45
+  },
+  {
+    "word": "minute",
+    "frequency": 45
+  },
+  {
+    "word": "miss",
+    "frequency": 45
+  },
+  {
+    "word": "model",
+    "frequency": 45
+  },
+  {
+    "word": "modern",
+    "frequency": 45
+  },
+  {
+    "word": "moment",
+    "frequency": 45
+  },
+  {
+    "word": "more",
+    "frequency": 45
+  },
+  {
+    "word": "mouth",
+    "frequency": 44
+  },
+  {
+    "word": "movement",
+    "frequency": 44
+  },
+  {
+    "word": "national",
+    "frequency": 44
+  },
+  {
+    "word": "natural",
+    "frequency": 44
+  },
+  {
+    "word": "nature",
+    "frequency": 44
+  },
+  {
+    "word": "nearly",
+    "frequency": 44
+  },
+  {
+    "word": "necessary",
+    "frequency": 44
+  },
+  {
+    "word": "network",
+    "frequency": 44
+  },
+  {
+    "word": "news",
+    "frequency": 44
+  },
+  {
+    "word": "newspaper",
+    "frequency": 44
+  },
+  {
+    "word": "nice",
+    "frequency": 44
+  },
+  {
+    "word": "none",
+    "frequency": 44
+  },
+  {
+    "word": "nor",
+    "frequency": 44
+  },
+  {
+    "word": "north",
+    "frequency": 44
+  },
+  {
+    "word": "note",
+    "frequency": 44
+  },
+  {
+    "word": "notice",
+    "frequency": 44
+  },
+  {
+    "word": "occur",
+    "frequency": 44
+  },
+  {
+    "word": "offer",
+    "frequency": 44
+  },
+  {
+    "word": "officer",
+    "frequency": 44
+  },
+  {
+    "word": "official",
+    "frequency": 44
+  },
+  {
+    "word": "oil",
+    "frequency": 44
+  },
+  {
+    "word": "operation",
+    "frequency": 44
+  },
+  {
+    "word": "opportunity",
+    "frequency": 44
+  },
+  {
+    "word": "option",
+    "frequency": 43
+  },
+  {
+    "word": "organization",
+    "frequency": 43
+  },
+  {
+    "word": "outside",
+    "frequency": 43
+  },
+  {
+    "word": "page",
+    "frequency": 43
+  },
+  {
+    "word": "pain",
+    "frequency": 43
+  },
+  {
+    "word": "painting",
+    "frequency": 43
+  },
+  {
+    "word": "pair",
+    "frequency": 43
+  },
+  {
+    "word": "paper",
+    "frequency": 43
+  },
+  {
+    "word": "parent",
+    "frequency": 43
+  },
+  {
+    "word": "particular",
+    "frequency": 43
+  },
+  {
+    "word": "partner",
+    "frequency": 43
+  },
+  {
+    "word": "pass",
+    "frequency": 43
+  },
+  {
+    "word": "patient",
+    "frequency": 43
+  },
+  {
+    "word": "pattern",
+    "frequency": 43
+  },
+  {
+    "word": "peace",
+    "frequency": 43
+  },
+  {
+    "word": "per",
+    "frequency": 43
+  },
+  {
+    "word": "perform",
+    "frequency": 43
+  },
+  {
+    "word": "period",
+    "frequency": 43
+  },
+  {
+    "word": "person",
+    "frequency": 43
+  },
+  {
+    "word": "personal",
+    "frequency": 43
+  },
+  {
+    "word": "physical",
+    "frequency": 43
+  },
+  {
+    "word": "picture",
+    "frequency": 43
+  },
+  {
+    "word": "piece",
+    "frequency": 43
+  },
+  {
+    "word": "plan",
+    "frequency": 43
+  },
+  {
+    "word": "player",
+    "frequency": 42
+  },
+  {
+    "word": "police",
+    "frequency": 42
+  },
+  {
+    "word": "policy",
+    "frequency": 42
+  },
+  {
+    "word": "political",
+    "frequency": 42
+  },
+  {
+    "word": "poor",
+    "frequency": 42
+  },
+  {
+    "word": "popular",
+    "frequency": 42
+  },
+  {
+    "word": "population",
+    "frequency": 42
+  },
+  {
+    "word": "position",
+    "frequency": 42
+  },
+  {
+    "word": "positive",
+    "frequency": 42
+  },
+  {
+    "word": "possible",
+    "frequency": 42
+  },
+  {
+    "word": "practice",
+    "frequency": 42
+  },
+  {
+    "word": "prepare",
+    "frequency": 42
+  },
+  {
+    "word": "president",
+    "frequency": 42
+  },
+  {
+    "word": "pressure",
+    "frequency": 42
+  },
+  {
+    "word": "pretty",
+    "frequency": 42
+  },
+  {
+    "word": "prevent",
+    "frequency": 42
+  },
+  {
+    "word": "private",
+    "frequency": 42
+  },
+  {
+    "word": "probably",
+    "frequency": 42
+  },
+  {
+    "word": "process",
+    "frequency": 42
+  },
+  {
+    "word": "produce",
+    "frequency": 42
+  },
+  {
+    "word": "product",
+    "frequency": 42
+  },
+  {
+    "word": "production",
+    "frequency": 42
+  },
+  {
+    "word": "professional",
+    "frequency": 42
+  },
+  {
+    "word": "professor",
+    "frequency": 42
+  },
+  {
+    "word": "project",
+    "frequency": 42
+  },
+  {
+    "word": "property",
+    "frequency": 42
+  },
+  {
+    "word": "protect",
+    "frequency": 41
+  },
+  {
+    "word": "prove",
+    "frequency": 41
+  },
+  {
+    "word": "provide",
+    "frequency": 41
+  },
+  {
+    "word": "purpose",
+    "frequency": 41
+  },
+  {
+    "word": "push",
+    "frequency": 41
+  },
+  {
+    "word": "quality",
+    "frequency": 41
+  },
+  {
+    "word": "quickly",
+    "frequency": 41
+  },
+  {
+    "word": "race",
+    "frequency": 41
+  },
+  {
+    "word": "radio",
+    "frequency": 41
+  },
+  {
+    "word": "raise",
+    "frequency": 41
+  },
+  {
+    "word": "range",
+    "frequency": 41
+  },
+  {
+    "word": "rate",
+    "frequency": 41
+  },
+  {
+    "word": "reach",
+    "frequency": 41
+  },
+  {
+    "word": "ready",
+    "frequency": 41
+  },
+  {
+    "word": "real",
+    "frequency": 41
+  },
+  {
+    "word": "reality",
+    "frequency": 41
+  },
+  {
+    "word": "realize",
+    "frequency": 41
+  },
+  {
+    "word": "reason",
+    "frequency": 41
+  },
+  {
+    "word": "receive",
+    "frequency": 41
+  },
+  {
+    "word": "recent",
+    "frequency": 41
+  },
+  {
+    "word": "recently",
+    "frequency": 41
+  },
+  {
+    "word": "record",
+    "frequency": 41
+  },
+  {
+    "word": "reduce",
+    "frequency": 41
+  },
+  {
+    "word": "reflect",
+    "frequency": 41
+  },
+  {
+    "word": "region",
+    "frequency": 41
+  },
+  {
+    "word": "relate",
+    "frequency": 41
+  },
+  {
+    "word": "relationship",
+    "frequency": 41
+  },
+  {
+    "word": "religious",
+    "frequency": 41
+  },
+  {
+    "word": "remain",
+    "frequency": 40
+  },
+  {
+    "word": "remember",
+    "frequency": 40
+  },
+  {
+    "word": "remove",
+    "frequency": 40
+  },
+  {
+    "word": "report",
+    "frequency": 40
+  },
+  {
+    "word": "represent",
+    "frequency": 40
+  },
+  {
+    "word": "require",
+    "frequency": 40
+  },
+  {
+    "word": "research",
+    "frequency": 40
+  },
+  {
+    "word": "resource",
+    "frequency": 40
+  },
+  {
+    "word": "respond",
+    "frequency": 40
+  },
+  {
+    "word": "response",
+    "frequency": 40
+  },
+  {
+    "word": "rest",
+    "frequency": 40
+  },
+  {
+    "word": "result",
+    "frequency": 40
+  },
+  {
+    "word": "return",
+    "frequency": 40
+  },
+  {
+    "word": "reveal",
+    "frequency": 40
+  },
+  {
+    "word": "rise",
+    "frequency": 40
+  },
+  {
+    "word": "risk",
+    "frequency": 40
+  },
+  {
+    "word": "road",
+    "frequency": 40
+  },
+  {
+    "word": "rock",
+    "frequency": 40
+  },
+  {
+    "word": "role",
+    "frequency": 40
+  },
+  {
+    "word": "rule",
+    "frequency": 40
+  },
+  {
+    "word": "safe",
+    "frequency": 40
+  },
+  {
+    "word": "save",
+    "frequency": 40
+  },
+  {
+    "word": "scene",
+    "frequency": 40
+  },
+  {
+    "word": "science",
+    "frequency": 40
+  },
+  {
+    "word": "season",
+    "frequency": 40
+  },
+  {
+    "word": "seat",
+    "frequency": 40
+  },
+  {
+    "word": "section",
+    "frequency": 40
+  },
+  {
+    "word": "security",
+    "frequency": 40
+  },
+  {
+    "word": "sell",
+    "frequency": 40
+  },
+  {
+    "word": "senior",
+    "frequency": 40
+  },
+  {
+    "word": "sense",
+    "frequency": 40
+  },
+  {
+    "word": "series",
+    "frequency": 39
+  },
+  {
+    "word": "serious",
+    "frequency": 39
+  },
+  {
+    "word": "serve",
+    "frequency": 39
+  },
+  {
+    "word": "seven",
+    "frequency": 39
+  },
+  {
+    "word": "several",
+    "frequency": 39
+  },
+  {
+    "word": "shake",
+    "frequency": 39
+  },
+  {
+    "word": "share",
+    "frequency": 39
+  },
+  {
+    "word": "shoot",
+    "frequency": 39
+  },
+  {
+    "word": "shot",
+    "frequency": 39
+  },
+  {
+    "word": "shoulder",
+    "frequency": 39
+  },
+  {
+    "word": "sign",
+    "frequency": 39
+  },
+  {
+    "word": "significant",
+    "frequency": 39
+  },
+  {
+    "word": "similar",
+    "frequency": 39
+  },
+  {
+    "word": "simple",
+    "frequency": 39
+  },
+  {
+    "word": "simply",
+    "frequency": 39
+  },
+  {
+    "word": "since",
+    "frequency": 39
+  },
+  {
+    "word": "sing",
+    "frequency": 39
+  },
+  {
+    "word": "single",
+    "frequency": 39
+  },
+  {
+    "word": "sister",
+    "frequency": 39
+  },
+  {
+    "word": "site",
+    "frequency": 39
+  },
+  {
+    "word": "situation",
+    "frequency": 39
+  },
+  {
+    "word": "six",
+    "frequency": 39
+  },
+  {
+    "word": "skill",
+    "frequency": 39
+  },
+  {
+    "word": "skin",
+    "frequency": 39
+  },
+  {
+    "word": "smile",
+    "frequency": 39
+  },
+  {
+    "word": "social",
+    "frequency": 39
+  },
+  {
+    "word": "society",
+    "frequency": 39
+  },
+  {
+    "word": "soldier",
+    "frequency": 39
+  },
+  {
+    "word": "son",
+    "frequency": 39
+  },
+  {
+    "word": "song",
+    "frequency": 39
+  },
+  {
+    "word": "soon",
+    "frequency": 39
+  },
+  {
+    "word": "sort",
+    "frequency": 39
+  },
+  {
+    "word": "source",
+    "frequency": 38
+  },
+  {
+    "word": "southern",
+    "frequency": 38
+  },
+  {
+    "word": "space",
+    "frequency": 38
+  },
+  {
+    "word": "speak",
+    "frequency": 38
+  },
+  {
+    "word": "special",
+    "frequency": 38
+  },
+  {
+    "word": "specific",
+    "frequency": 38
+  },
+  {
+    "word": "speech",
+    "frequency": 38
+  },
+  {
+    "word": "spend",
+    "frequency": 38
+  },
+  {
+    "word": "sport",
+    "frequency": 38
+  },
+  {
+    "word": "spring",
+    "frequency": 38
+  },
+  {
+    "word": "staff",
+    "frequency": 38
+  },
+  {
+    "word": "stage",
+    "frequency": 38
+  },
+  {
+    "word": "standard",
+    "frequency": 38
+  },
+  {
+    "word": "star",
+    "frequency": 38
+  },
+  {
+    "word": "statement",
+    "frequency": 38
+  },
+  {
+    "word": "station",
+    "frequency": 38
+  },
+  {
+    "word": "stay",
+    "frequency": 38
+  },
+  {
+    "word": "step",
+    "frequency": 38
+  },
+  {
+    "word": "stock",
+    "frequency": 38
+  },
+  {
+    "word": "strategy",
+    "frequency": 38
+  },
+  {
+    "word": "strong",
+    "frequency": 38
+  },
+  {
+    "word": "structure",
+    "frequency": 38
+  },
+  {
+    "word": "study",
+    "frequency": 38
+  },
+  {
+    "word": "stuff",
+    "frequency": 38
+  },
+  {
+    "word": "style",
+    "frequency": 38
+  },
+  {
+    "word": "subject",
+    "frequency": 38
+  },
+  {
+    "word": "success",
+    "frequency": 38
+  },
+  {
+    "word": "successful",
+    "frequency": 38
+  },
+  {
+    "word": "suddenly",
+    "frequency": 38
+  },
+  {
+    "word": "suffer",
+    "frequency": 38
+  },
+  {
+    "word": "suggest",
+    "frequency": 38
+  },
+  {
+    "word": "summer",
+    "frequency": 38
+  },
+  {
+    "word": "support",
+    "frequency": 38
+  },
+  {
+    "word": "surface",
+    "frequency": 38
+  },
+  {
+    "word": "table",
+    "frequency": 38
+  },
+  {
+    "word": "task",
+    "frequency": 37
+  },
+  {
+    "word": "tax",
+    "frequency": 37
+  },
+  {
+    "word": "teach",
+    "frequency": 37
+  },
+  {
+    "word": "teacher",
+    "frequency": 37
+  },
+  {
+    "word": "team",
+    "frequency": 37
+  },
+  {
+    "word": "technology",
+    "frequency": 37
+  },
+  {
+    "word": "television",
+    "frequency": 37
+  },
+  {
+    "word": "tend",
+    "frequency": 37
+  },
+  {
+    "word": "test",
+    "frequency": 37
+  },
+  {
+    "word": "theory",
+    "frequency": 37
+  },
+  {
+    "word": "third",
+    "frequency": 37
+  },
+  {
+    "word": "those",
+    "frequency": 37
+  },
+  {
+    "word": "though",
+    "frequency": 37
+  },
+  {
+    "word": "thought",
+    "frequency": 37
+  },
+  {
+    "word": "thousand",
+    "frequency": 37
+  },
+  {
+    "word": "threat",
+    "frequency": 37
+  },
+  {
+    "word": "three",
+    "frequency": 37
+  },
+  {
+    "word": "through",
+    "frequency": 37
+  },
+  {
+    "word": "throughout",
+    "frequency": 37
+  },
+  {
+    "word": "throw",
+    "frequency": 37
+  },
+  {
+    "word": "thus",
+    "frequency": 37
+  },
+  {
+    "word": "together",
+    "frequency": 37
+  },
+  {
+    "word": "tonight",
+    "frequency": 37
+  },
+  {
+    "word": "total",
+    "frequency": 37
+  },
+  {
+    "word": "tough",
+    "frequency": 37
+  },
+  {
+    "word": "toward",
+    "frequency": 37
+  },
+  {
+    "word": "town",
+    "frequency": 37
+  },
+  {
+    "word": "trade",
+    "frequency": 37
+  },
+  {
+    "word": "traditional",
+    "frequency": 37
+  },
+  {
+    "word": "training",
+    "frequency": 37
+  },
+  {
+    "word": "treat",
+    "frequency": 37
+  },
+  {
+    "word": "treatment",
+    "frequency": 37
+  },
+  {
+    "word": "tree",
+    "frequency": 37
+  },
+  {
+    "word": "trial",
+    "frequency": 37
+  },
+  {
+    "word": "trip",
+    "frequency": 37
+  },
+  {
+    "word": "trouble",
+    "frequency": 37
+  },
+  {
+    "word": "true",
+    "frequency": 37
+  },
+  {
+    "word": "truth",
+    "frequency": 37
+  },
+  {
+    "word": "type",
+    "frequency": 36
+  },
+  {
+    "word": "unit",
+    "frequency": 36
+  },
+  {
+    "word": "arrive",
+    "frequency": 36
+  },
+  {
+    "word": "attack",
+    "frequency": 36
+  },
+  {
+    "word": "attention",
+    "frequency": 36
+  },
+  {
+    "word": "available",
+    "frequency": 36
+  },
+  {
+    "word": "average",
+    "frequency": 36
+  },
+  {
+    "word": "avoid",
+    "frequency": 36
+  },
+  {
+    "word": "beat",
+    "frequency": 36
+  },
+  {
+    "word": "beautiful",
+    "frequency": 36
+  },
+  {
+    "word": "become",
+    "frequency": 36
+  },
+  {
+    "word": "believe",
+    "frequency": 36
+  },
+  {
+    "word": "benefit",
+    "frequency": 36
+  },
+  {
+    "word": "best",
+    "frequency": 36
+  },
+  {
+    "word": "better",
+    "frequency": 36
+  },
+  {
+    "word": "beyond",
+    "frequency": 36
+  },
+  {
+    "word": "billion",
+    "frequency": 36
+  },
+  {
+    "word": "blood",
+    "frequency": 36
+  },
+  {
+    "word": "born",
+    "frequency": 36
+  },
+  {
+    "word": "break",
+    "frequency": 36
+  },
+  {
+    "word": "brother",
+    "frequency": 36
+  },
+  {
+    "word": "camera",
+    "frequency": 36
+  },
+  {
+    "word": "campaign",
+    "frequency": 36
+  },
+  {
+    "word": "candidate",
+    "frequency": 36
+  },
+  {
+    "word": "capital",
+    "frequency": 36
+  },
+  {
+    "word": "career",
+    "frequency": 36
+  },
+  {
+    "word": "cause",
+    "frequency": 36
+  },
+  {
+    "word": "center",
+    "frequency": 36
+  },
+  {
+    "word": "century",
+    "frequency": 36
+  },
+  {
+    "word": "certainly",
+    "frequency": 36
+  },
+  {
+    "word": "chair",
+    "frequency": 36
+  },
+  {
+    "word": "challenge",
+    "frequency": 36
+  },
+  {
+    "word": "character",
+    "frequency": 36
+  },
+  {
+    "word": "choice",
+    "frequency": 36
+  },
+  {
+    "word": "church",
+    "frequency": 36
+  },
+  {
+    "word": "citizen",
+    "frequency": 36
+  },
+  {
+    "word": "civil",
+    "frequency": 36
+  },
+  {
+    "word": "claim",
+    "frequency": 36
+  },
+  {
+    "word": "clearly",
+    "frequency": 36
+  },
+  {
+    "word": "coach",
+    "frequency": 36
+  },
+  {
+    "word": "collection",
+    "frequency": 36
+  },
+  {
+    "word": "college",
+    "frequency": 35
+  },
+  {
+    "word": "color",
+    "frequency": 35
+  },
+  {
+    "word": "commercial",
+    "frequency": 35
+  },
+  {
+    "word": "compare",
+    "frequency": 35
+  },
+  {
+    "word": "concern",
+    "frequency": 35
+  },
+  {
+    "word": "condition",
+    "frequency": 35
+  },
+  {
+    "word": "conference",
+    "frequency": 35
+  },
+  {
+    "word": "congress",
+    "frequency": 35
+  },
+  {
+    "word": "consider",
+    "frequency": 35
+  },
+  {
+    "word": "contain",
+    "frequency": 35
+  },
+  {
+    "word": "continue",
+    "frequency": 35
+  },
+  {
+    "word": "conversation",
+    "frequency": 35
+  },
+  {
+    "word": "couple",
+    "frequency": 35
+  },
+  {
+    "word": "crime",
+    "frequency": 35
+  },
+  {
+    "word": "cultural",
+    "frequency": 35
+  },
+  {
+    "word": "culture",
+    "frequency": 35
+  },
+  {
+    "word": "cup",
+    "frequency": 35
+  },
+  {
+    "word": "current",
+    "frequency": 35
+  },
+  {
+    "word": "customer",
+    "frequency": 35
+  },
+  {
+    "word": "daughter",
+    "frequency": 35
+  },
+  {
+    "word": "dead",
+    "frequency": 35
+  },
+  {
+    "word": "debate",
+    "frequency": 35
+  },
+  {
+    "word": "decade",
+    "frequency": 35
+  },
+  {
+    "word": "decision",
+    "frequency": 35
+  },
+  {
+    "word": "defense",
+    "frequency": 35
+  },
+  {
+    "word": "democratic",
+    "frequency": 35
+  },
+  {
+    "word": "department",
+    "frequency": 35
+  },
+  {
+    "word": "depend",
+    "frequency": 35
+  },
+  {
+    "word": "describe",
+    "frequency": 35
+  },
+  {
+    "word": "design",
+    "frequency": 35
+  },
+  {
+    "word": "despite",
+    "frequency": 35
+  },
+  {
+    "word": "development",
+    "frequency": 35
+  },
+  {
+    "word": "difficult",
+    "frequency": 35
+  },
+  {
+    "word": "director",
+    "frequency": 35
+  },
+  {
+    "word": "discover",
+    "frequency": 35
+  },
+  {
+    "word": "disease",
+    "frequency": 35
+  },
+  {
+    "word": "discussion",
+    "frequency": 35
+  },
+  {
+    "word": "dream",
+    "frequency": 35
+  },
+  {
+    "word": "drug",
+    "frequency": 35
+  },
+  {
+    "word": "economic",
+    "frequency": 35
+  },
+  {
+    "word": "economy",
+    "frequency": 35
+  },
+  {
+    "word": "edge",
+    "frequency": 35
+  },
+  {
+    "word": "effort",
+    "frequency": 35
+  },
+  {
+    "word": "election",
+    "frequency": 35
+  },
+  {
+    "word": "employee",
+    "frequency": 35
+  },
+  {
+    "word": "entire",
+    "frequency": 34
+  },
+  {
+    "word": "establish",
+    "frequency": 34
+  },
+  {
+    "word": "evening",
+    "frequency": 34
+  },
+  {
+    "word": "everyone",
+    "frequency": 34
+  },
+  {
+    "word": "executive",
+    "frequency": 34
+  },
+  {
+    "word": "exist",
+    "frequency": 34
+  },
+  {
+    "word": "expect",
+    "frequency": 34
+  },
+  {
+    "word": "expert",
+    "frequency": 34
+  },
+  {
+    "word": "explain",
+    "frequency": 34
+  },
+  {
+    "word": "fall",
+    "frequency": 34
+  },
+  {
+    "word": "fast",
+    "frequency": 34
+  },
+  {
+    "word": "fear",
+    "frequency": 34
+  },
+  {
+    "word": "federal",
+    "frequency": 34
+  },
+  {
+    "word": "film",
+    "frequency": 34
+  },
+  {
+    "word": "finally",
+    "frequency": 34
+  },
+  {
+    "word": "fire",
+    "frequency": 34
+  },
+  {
+    "word": "firm",
+    "frequency": 34
+  },
+  {
+    "word": "former",
+    "frequency": 34
+  },
+  {
+    "word": "forward",
+    "frequency": 34
+  },
+  {
+    "word": "front",
+    "frequency": 34
+  },
+  {
+    "word": "generation",
+    "frequency": 34
+  },
+  {
+    "word": "growth",
+    "frequency": 34
+  },
+  {
+    "word": "heat",
+    "frequency": 34
+  },
+  {
+    "word": "hospital",
+    "frequency": 34
+  },
+  {
+    "word": "image",
+    "frequency": 34
+  },
+  {
+    "word": "impact",
+    "frequency": 34
+  },
+  {
+    "word": "improve",
+    "frequency": 34
+  },
+  {
+    "word": "indeed",
+    "frequency": 34
+  },
+  {
+    "word": "inside",
+    "frequency": 34
+  },
+  {
+    "word": "institution",
+    "frequency": 34
+  },
+  {
+    "word": "interesting",
+    "frequency": 34
+  },
+  {
+    "word": "investment",
+    "frequency": 34
+  },
+  {
+    "word": "itself",
+    "frequency": 34
+  },
+  {
+    "word": "language",
+    "frequency": 34
+  },
+  {
+    "word": "later",
+    "frequency": 34
+  },
+  {
+    "word": "laugh",
+    "frequency": 34
+  },
+  {
+    "word": "leader",
+    "frequency": 34
+  },
+  {
+    "word": "least",
+    "frequency": 34
+  },
+  {
+    "word": "local",
+    "frequency": 34
+  },
+  {
+    "word": "loss",
+    "frequency": 34
+  },
+  {
+    "word": "magazine",
+    "frequency": 34
+  },
+  {
+    "word": "maintain",
+    "frequency": 34
+  },
+  {
+    "word": "majority",
+    "frequency": 34
+  },
+  {
+    "word": "management",
+    "frequency": 34
+  },
+  {
+    "word": "marriage",
+    "frequency": 34
+  },
+  {
+    "word": "member",
+    "frequency": 34
+  },
+  {
+    "word": "mission",
+    "frequency": 34
+  },
+  {
+    "word": "myself",
+    "frequency": 34
+  },
+  {
+    "word": "nation",
+    "frequency": 34
+  },
+  {
+    "word": "onto",
+    "frequency": 33
+  },
+  {
+    "word": "otherwise",
+    "frequency": 33
+  },
+  {
+    "word": "owner",
+    "frequency": 33
+  },
+  {
+    "word": "performance",
+    "frequency": 33
+  },
+  {
+    "word": "perhaps",
+    "frequency": 33
+  },
+  {
+    "word": "politics",
+    "frequency": 33
+  },
+  {
+    "word": "rather",
+    "frequency": 33
+  },
+  {
+    "word": "recognize",
+    "frequency": 33
+  },
+  {
+    "word": "red",
+    "frequency": 33
+  },
+  {
+    "word": "score",
+    "frequency": 33
+  },
+  {
+    "word": "sea",
+    "frequency": 33
+  },
+  {
+    "word": "seek",
+    "frequency": 33
+  },
+  {
+    "word": "somebody",
+    "frequency": 33
+  },
+  {
+    "word": "someone",
+    "frequency": 33
+  },
+  {
+    "word": "usually",
+    "frequency": 33
+  },
+  {
+    "word": "value",
+    "frequency": 33
+  },
+  {
+    "word": "various",
+    "frequency": 33
+  },
+  {
+    "word": "violence",
+    "frequency": 33
+  },
+  {
+    "word": "visit",
+    "frequency": 33
+  },
+  {
+    "word": "voice",
+    "frequency": 33
+  },
+  {
+    "word": "vote",
+    "frequency": 33
+  },
+  {
+    "word": "wait",
+    "frequency": 33
+  },
+  {
+    "word": "wall",
+    "frequency": 33
+  },
+  {
+    "word": "watch",
+    "frequency": 33
+  },
+  {
+    "word": "weapon",
+    "frequency": 33
+  },
+  {
+    "word": "wear",
+    "frequency": 33
+  },
+  {
+    "word": "weight",
+    "frequency": 33
+  },
+  {
+    "word": "western",
+    "frequency": 33
+  },
+  {
+    "word": "whole",
+    "frequency": 33
+  },
+  {
+    "word": "whom",
+    "frequency": 33
+  },
+  {
+    "word": "wide",
+    "frequency": 33
+  },
+  {
+    "word": "wife",
+    "frequency": 33
+  },
+  {
+    "word": "win",
+    "frequency": 33
+  },
+  {
+    "word": "wind",
+    "frequency": 33
+  },
+  {
+    "word": "window",
+    "frequency": 33
+  },
+  {
+    "word": "wish",
+    "frequency": 33
+  },
+  {
+    "word": "without",
+    "frequency": 33
+  },
+  {
+    "word": "wonder",
+    "frequency": 33
+  },
+  {
+    "word": "worker",
+    "frequency": 33
+  },
+  {
+    "word": "worry",
+    "frequency": 33
+  },
+  {
+    "word": "wrong",
+    "frequency": 33
+  },
+  {
+    "word": "above",
+    "frequency": 33
+  },
+  {
+    "word": "accept",
+    "frequency": 33
+  },
+  {
+    "word": "account",
+    "frequency": 33
+  },
+  {
+    "word": "across",
+    "frequency": 33
+  },
+  {
+    "word": "action",
+    "frequency": 33
+  },
+  {
+    "word": "actually",
+    "frequency": 33
+  },
+  {
+    "word": "address",
+    "frequency": 33
+  },
+  {
+    "word": "administration",
+    "frequency": 33
+  },
+  {
+    "word": "admit",
+    "frequency": 33
+  },
+  {
+    "word": "advance",
+    "frequency": 33
+  },
+  {
+    "word": "advantage",
+    "frequency": 33
+  },
+  {
+    "word": "affect",
+    "frequency": 33
+  },
+  {
+    "word": "afford",
+    "frequency": 32
+  },
+  {
+    "word": "afraid",
+    "frequency": 32
+  },
+  {
+    "word": "afternoon",
+    "frequency": 32
+  },
+  {
+    "word": "again",
+    "frequency": 32
+  },
+  {
+    "word": "against",
+    "frequency": 32
+  },
+  {
+    "word": "agent",
+    "frequency": 32
+  },
+  {
+    "word": "ago",
+    "frequency": 32
+  },
+  {
+    "word": "agree",
+    "frequency": 32
+  },
+  {
+    "word": "ahead",
+    "frequency": 32
+  },
+  {
+    "word": "almost",
+    "frequency": 32
+  },
+  {
+    "word": "american",
+    "frequency": 32
+  },
+  {
+    "word": "among",
+    "frequency": 32
+  },
+  {
+    "word": "amount",
+    "frequency": 32
+  },
+  {
+    "word": "analysis",
+    "frequency": 32
+  },
+  {
+    "word": "animal",
+    "frequency": 32
+  },
+  {
+    "word": "answer",
+    "frequency": 32
+  },
+  {
+    "word": "anyone",
+    "frequency": 32
+  },
+  {
+    "word": "anything",
+    "frequency": 32
+  },
+  {
+    "word": "anyway",
+    "frequency": 32
+  },
+  {
+    "word": "apartment",
+    "frequency": 32
+  },
+  {
+    "word": "apparently",
+    "frequency": 32
+  },
+  {
+    "word": "appeal",
+    "frequency": 32
+  },
+  {
+    "word": "appear",
+    "frequency": 32
+  },
+  {
+    "word": "apple",
+    "frequency": 32
+  },
+  {
+    "word": "apply",
+    "frequency": 32
+  },
+  {
+    "word": "approach",
+    "frequency": 32
+  },
+  {
+    "word": "argument",
+    "frequency": 32
+  },
+  {
+    "word": "around",
+    "frequency": 32
+  },
+  {
+    "word": "article",
+    "frequency": 32
+  },
+  {
+    "word": "artist",
+    "frequency": 32
+  },
+  {
+    "word": "attempt",
+    "frequency": 32
+  },
+  {
+    "word": "audience",
+    "frequency": 32
+  },
+  {
+    "word": "author",
+    "frequency": 32
+  },
+  {
+    "word": "authority",
+    "frequency": 32
+  },
+  {
+    "word": "away",
+    "frequency": 32
+  },
+  {
+    "word": "behind",
+    "frequency": 32
+  },
+  {
+    "word": "below",
+    "frequency": 32
+  },
+  {
+    "word": "black",
+    "frequency": 32
+  },
+  {
+    "word": "blue",
+    "frequency": 32
+  },
+  {
+    "word": "board",
+    "frequency": 32
+  },
+  {
+    "word": "bone",
+    "frequency": 32
+  },
+  {
+    "word": "bottom",
+    "frequency": 32
+  },
+  {
+    "word": "brown",
+    "frequency": 32
+  },
+  {
+    "word": "budget",
+    "frequency": 32
+  },
+  {
+    "word": "building",
+    "frequency": 32
+  },
+  {
+    "word": "burn",
+    "frequency": 32
+  },
+  {
+    "word": "came",
+    "frequency": 32
+  },
+  {
+    "word": "card",
+    "frequency": 32
+  },
+  {
+    "word": "central",
+    "frequency": 32
+  },
+  {
+    "word": "certain",
+    "frequency": 32
+  },
+  {
+    "word": "chairman",
+    "frequency": 32
+  },
+  {
+    "word": "chance",
+    "frequency": 32
+  },
+  {
+    "word": "chapter",
+    "frequency": 32
+  },
+  {
+    "word": "choose",
+    "frequency": 32
+  },
+  {
+    "word": "consumer",
+    "frequency": 32
+  },
+  {
+    "word": "court",
+    "frequency": 32
+  },
+  {
+    "word": "democrat",
+    "frequency": 32
+  },
+  {
+    "word": "detail",
+    "frequency": 32
+  },
+  {
+    "word": "determine",
+    "frequency": 31
+  },
+  {
+    "word": "difference",
+    "frequency": 31
+  },
+  {
+    "word": "down",
+    "frequency": 31
+  },
+  {
+    "word": "everybody",
+    "frequency": 31
+  },
+  {
+    "word": "hour",
+    "frequency": 31
+  },
+  {
+    "word": "however",
+    "frequency": 31
+  },
+  {
+    "word": "identify",
+    "frequency": 31
+  },
+  {
+    "word": "knowledge",
+    "frequency": 31
+  },
+  {
+    "word": "land",
+    "frequency": 31
+  },
+  {
+    "word": "nobody",
+    "frequency": 31
+  },
+  {
+    "word": "oh",
+    "frequency": 31
+  },
+  {
+    "word": "others",
+    "frequency": 31
+  },
+  {
+    "word": "particularly",
+    "frequency": 31
+  },
+  {
+    "word": "percent",
+    "frequency": 31
+  },
+  {
+    "word": "quarter",
+    "frequency": 31
+  },
+  {
+    "word": "sir",
+    "frequency": 31
+  },
+  {
+    "word": "something",
+    "frequency": 31
+  },
+  {
+    "word": "sometimes",
+    "frequency": 31
+  },
+  {
+    "word": "tv",
+    "frequency": 31
+  },
+  {
+    "word": "whatever",
+    "frequency": 31
+  },
+  {
+    "word": "whether",
+    "frequency": 31
+  },
+  {
+    "word": "while",
+    "frequency": 31
+  },
+  {
+    "word": "whose",
+    "frequency": 31
+  },
+  {
+    "word": "why",
+    "frequency": 31
+  },
+  {
+    "word": "writer",
+    "frequency": 31
+  },
+  {
+    "word": "yeah",
+    "frequency": 31
+  },
+  {
+    "word": "yet",
+    "frequency": 31
+  },
+  {
+    "word": "yourself",
+    "frequency": 31
+  },
+  {
+    "word": "youth",
+    "frequency": 31
+  },
+  {
+    "word": "zero",
+    "frequency": 31
+  }
 ]

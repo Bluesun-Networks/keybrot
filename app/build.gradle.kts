@@ -56,9 +56,9 @@ dependencies {
     implementation("androidx.preference:preference-ktx:1.2.1")
 
     // Room for persistence (user frequency data, bigram/trigram context)
+    // Note: Room compiler (ksp) will be added when Room entities are created (issue #6)
     implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
-    annotationProcessor("androidx.room:room-compiler:2.6.1")
 
     // Coroutines for background Trie operations
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")

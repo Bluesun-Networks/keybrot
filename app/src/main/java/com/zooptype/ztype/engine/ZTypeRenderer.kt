@@ -4,6 +4,7 @@ import android.content.Context
 import android.opengl.GLES30
 import android.opengl.GLSurfaceView
 import android.opengl.Matrix
+import com.zooptype.ztype.debug.ComposingTextOverlay
 import com.zooptype.ztype.debug.DebugOverlay
 import com.zooptype.ztype.gesture.GestureProcessor
 import com.zooptype.ztype.haptics.HapticEngine
@@ -57,6 +58,9 @@ class ZTypeRenderer(
     // Node mesh (shared geometry for all nodes)
     private lateinit var nodeMesh: NodeMesh
 
+    // Composing text overlay (shows typed prefix + predictions)
+    private val composingOverlay = ComposingTextOverlay()
+
     // Timing
     private var lastFrameTime = System.nanoTime()
     private var deltaTime = 0f
@@ -103,6 +107,7 @@ class ZTypeRenderer(
 
         // Initialize debug overlay
         debugOverlay.init(sdfFontAtlas, sdfTextShaderProgram)
+        composingOverlay.init(sdfFontAtlas, sdfTextShaderProgram)
     }
 
     override fun onSurfaceChanged(gl: GL10?, width: Int, height: Int) {
@@ -191,6 +196,14 @@ class ZTypeRenderer(
 
         // --- RENDER ---
         renderNodes(layoutNodes)
+
+        // --- COMPOSING TEXT OVERLAY ---
+        composingOverlay.render(
+            trieNavigator = trieNavigator,
+            viewportWidth = viewportWidth,
+            viewportHeight = viewportHeight,
+            themeColors = themeEngine?.getColors()
+        )
 
         // --- DEBUG OVERLAY ---
         debugOverlay.render(
