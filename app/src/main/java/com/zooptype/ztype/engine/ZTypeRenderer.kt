@@ -216,6 +216,9 @@ class ZTypeRenderer(
             viewportHeight = viewportHeight
         )
 
+        // --- POLL PENDING SELECTIONS ---
+        gestureProcessor?.pollPendingSelection()
+
         // --- ENGINE HUM ---
         hapticEngine?.updateEngineHum(divePhysics.getSpeed())
     }
@@ -255,8 +258,15 @@ class ZTypeRenderer(
             }
         }
 
-        // Only count as focused if reasonably close (within ~30 degrees)
-        return if (bestDot > 0.85f) bestIndex else -1
+        // Adaptive threshold: fewer nodes = more generous targeting
+        // 5 nodes → 0.7 (wider cone), 26 nodes → 0.85 (standard), 50+ nodes → 0.92 (precise)
+        val threshold = when {
+            nodes.size <= 5 -> 0.7f
+            nodes.size <= 10 -> 0.78f
+            nodes.size <= 26 -> 0.85f
+            else -> 0.92f
+        }
+        return if (bestDot > threshold) bestIndex else -1
     }
 
     private fun renderNodes(nodes: List<SphereNode>) {

@@ -161,4 +161,14 @@ class GestureProcessor(
     fun notifyNodeSelected(char: Char) {
         pendingSelection = char
     }
+
+    /**
+     * Called by the render loop each frame to ensure pending selections
+     * are processed even if no touch events are firing.
+     * This handles the edge case where selection triggers between
+     * touch events or right after touch-up.
+     */
+    fun pollPendingSelection() {
+        processPendingSelection()
+    }
 }
